@@ -1,0 +1,35 @@
+.sidebar {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  
+  .sidebar-button {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 16px;
+    transition: all 0.3s ease;
+    width: 100px;
+  }
+  
+  .sidebar-button:hover {
+    background-color: #666;
+  }
+  
+  .sidebar-content {
+    display: none;
+    padding: 16px;
+    width: 200px;
+  }
+  
+  .sidebar-button:hover + .sidebar-content,
+  .sidebar-content:hover {
+    display: block;
+  }
+  
+  
+  
+  
