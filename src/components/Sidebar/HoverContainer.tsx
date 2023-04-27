@@ -8,14 +8,6 @@ import Button from "./SidebarButtons";
 import { FaHeart } from "react-icons/fa";
 
 
-const inter = Inter({ subsets: ["latin"] });
-const navItems: { label: string; page?: string; link?: string }[] = [
-    { label: "Home", page: "/" },
-    { label: "Blog", page: "/blog" },
-    { label: "Contact", page: "/contact" },
-    { label: "Source Code", link: "https://github.com/ijjk/notion-blog" },
-];
-
 export default function HoverContainer({ children }) {
     const [isNavExpanded, setIsNavExpanded] = useState(false);
     return (
@@ -23,8 +15,6 @@ export default function HoverContainer({ children }) {
             <div className={styles.container}>
                 <nav className={styles.navigation}>
 
-                    {/*______________ LISTA DE BOTONES ______________*/}
-                    
                         <div>
                         
                       <Button >{2}</Button>
@@ -32,7 +22,6 @@ export default function HoverContainer({ children }) {
                     
                         <Button >{3}</Button>
 
-                    {/*____________ CONTENIDO A MOSTRAR ____________*/}
                     <div id={styles.show}>
                         <div className="ct" id="t1">
                             <div className="ct" id="t2">

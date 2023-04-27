@@ -5,9 +5,6 @@ import { Inter } from "next/font/google";
 
 import styles from "./Sidebar.module.css";
 
-import HoverContainer from "./HoverContainer";
-import { FaHeart } from "react-icons/fa";
-
 
 import Button from "./SidebarButtons";
 
@@ -35,8 +32,8 @@ export default function Sidebar({ children }) {
                 </div>
             </div>
 
-            <div className={styles["content-overlay"]}>  {/*MIS POSTEOS*/}
-                <div className={styles["sidebar-content "]}>  {/*MIS POSTEOS*/}
+            <div className={styles["content-overlay"]}>  
+                <div className={styles["sidebar-content "]}>
                     <h1>estoy dentro de un div</h1>
                 </div>
             </div>
@@ -44,19 +41,15 @@ export default function Sidebar({ children }) {
       
             <div className={styles.show}>
 
-                {/*POST 1*/}
                 <div id={styles.t1}>
                     POST 1
                 </div>
-                {/*POST 2*/}
                 <div id={styles.t2}>
                     POST 2
                 </div>
-                {/*POST 3*/}
                 <div id={styles.t2}>
                     POST 3
                 </div>
-                {/*POST 4*/}
                 <div id={styles.t2}>
                     POST 4
                 </div>
