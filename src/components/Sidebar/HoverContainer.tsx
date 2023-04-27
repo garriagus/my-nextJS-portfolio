@@ -5,7 +5,6 @@ import { Inter } from "next/font/google";
 
 import styles from "./Sidebar.module.css";
 import Button from "./SidebarButtons";
-import HoverContainer from "./HoverContainer";
 import { FaHeart } from "react-icons/fa";
 
 
@@ -17,7 +16,7 @@ const navItems: { label: string; page?: string; link?: string }[] = [
     { label: "Source Code", link: "https://github.com/ijjk/notion-blog" },
 ];
 
-export default function Sidebar({ children }) {
+export default function HoverContainer({ children }) {
     const [isNavExpanded, setIsNavExpanded] = useState(false);
     return (
         <>

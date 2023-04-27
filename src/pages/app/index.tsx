@@ -31,7 +31,6 @@ export default function index() {
         <meta property="og:url" content="https://codepen.io/hrtzt/details/NPZKRN" />
         <meta property="og:image" content="https://pbs.twimg.com/media/CCNJN_XUMAAJSzU.jpg:large" />
       </Head>
-      <Sidebar>{}</Sidebar>
     </>
 
   );
