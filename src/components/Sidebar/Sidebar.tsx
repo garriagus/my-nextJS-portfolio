@@ -6,7 +6,7 @@ import { Inter } from "next/font/google";
 import styles from "./Sidebar.module.css";
 
 
-import Button from "./SidebarButtons";
+import SidebarButton from "./SidebarButtons";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,38 +22,12 @@ export default function Sidebar({ children }) {
     return (
         <>
             <nav className={styles["navigation"]}>
-
+                <div className="slidebar"></div>
+            <SidebarButton>{1}</SidebarButton>
+            
+            <SidebarButton>{2}</SidebarButton>
             </nav>
-            <div className={styles.container}>
-                <div className={styles["sidebar"]} >
-                    <ul id={styles.btn1}>
-                        <Button>{1}</Button>
-                    </ul>
-                </div>
-            </div>
-
-            <div className={styles["content-overlay"]}>  
-                <div className={styles["sidebar-content "]}>
-                    <h1>estoy dentro de un div</h1>
-                </div>
-            </div>
-
-      
-            <div className={styles.show}>
-
-                <div id={styles.t1}>
-                    POST 1
-                </div>
-                <div id={styles.t2}>
-                    POST 2
-                </div>
-                <div id={styles.t2}>
-                    POST 3
-                </div>
-                <div id={styles.t2}>
-                    POST 4
-                </div>
-            </div>
+        
 
         </>
     );

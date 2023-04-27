@@ -6,6 +6,7 @@ import styles from '@/styles/Home.module.css'
 // My components
 import Head from '../components/Head/Head'
 import Navbar from '../components/Navbar/Navbar'
+import Sidebar from '../components/Sidebar/Sidebar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,9 +14,11 @@ export default function Home() {
   return (
     <>
       <Head></Head>
-      <main className={`${styles.main} ${inter.className}`}>        
-      <Navbar></Navbar>
-        <div className={styles.description}>
+      <main className={`${styles.main} ${inter.className}`}>
+        <Navbar></Navbar>
+        <Sidebar>{}</Sidebar>
+       
+        <div id={styles["show"]}>
           <p>
             Get started by editing&nbsp;
             <code className={styles.code}>src/pages/index.tsx</code>
@@ -50,6 +53,7 @@ export default function Home() {
           />
         </div>
 
+       
         <div className={styles.grid}>
           <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
