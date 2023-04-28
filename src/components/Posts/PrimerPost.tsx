@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 
-import styles from "./Sidebar.module.css";
+import styles from "./Post.module.css";
 
 
 import SidebarButton from "../Buttons/SidebarButtons";
@@ -27,7 +27,7 @@ const navItems: { label: string; page?: string; link?: string }[] = [
     { label: "Source Code", link: "https://github.com/ijjk/notion-blog" },
 ];
 
-export default function Sidebar({ children }) {
+export default function Post({ children }) {
     const [isNavExpanded, setIsNavExpanded] = useState(false);
     /* ejemplos de estados hoocks
         type estilos = {
@@ -103,31 +103,34 @@ export default function Sidebar({ children }) {
 
     return (
         <>
-            <div className={styles.wrapper}>
-                <div onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave} className={styles.sidebar}>
-                    <SidebarButton id="p1" >{1}</SidebarButton>
-                    <SidebarButton id="p2" >{2}</SidebarButton>
-                    <SidebarButton
-                        id="p3"
-                        className="nombre de clase"
-                        border="none"
-                        color="pink"
-                        height="200px"
-                        onClick={() => console.log("You clicked on the pink circle!")}
-                        radius="50%"
-                        width="200px"
-                        children="I'm a pink circle!"
-                        display="none"
-                    />
+
+            <div className={styles.container}>
+                <div className={styles.grid}>
+                    <div className={styles.box}>
+                        <SidebarButton
+                            id="p3"
+                            className="nombre de clase"
+                            border="none"
+                            color="pink"
+                            height="200px"
+                            onClick={() => console.log("You clicked on the pink circle!")}
+                            radius="50%"
+                            width="200px"
+                            children="I'm a pink circle!"
+                            display="none"
+                        />
+                    </div>
+                    <h1 id={styles.title}>Contenido de la página</h1>
+
+
+                    <div className={styles["paragraf"]}>
+                        <p>Aquí va el contenido de la página que se muestra al lado derecho de los botones.</p>
+                        esto es un parrafo
+                    </div>
+
                 </div>
-
             </div>
 
-            <div className={styles["sidebar-content"]}>
-                <h1 id={styles.c1}>Contenido de la página</h1>
-                <p>Aquí va el contenido de la página que se muestra al lado derecho de los botones.</p>
-            </div>
 
 
 

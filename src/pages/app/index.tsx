@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Inter } from "next/font/google";
 
 import Sidebar from '../../components/Sidebar/Sidebar'
-
+import Post from '../../components/Posts/PrimerPost'
 
 import SidebarButton from '../../components/Buttons/SidebarButtons'
 import { FaHeart } from "react-icons/fa";
@@ -16,9 +16,12 @@ import styles from "../../components/Sidebar/Sidebar.module.css";
 
 
 export default function index() {
-
+  const styles = {
+    display: "flex"
+}
 
 return (
+
   <>
     <Head>
       <title>My page title</title>
@@ -27,8 +30,12 @@ return (
       <meta property="og:image" content="https://pbs.twimg.com/media/CCNJN_XUMAAJSzU.jpg:large" />
     </Head>
 
-
-    <Sidebar>estoy en un sidebar en un index en app</Sidebar>
+    <main style={styles}>
+        <section style={{ width: "1024px" }}>{}</section>
+        {/*<Sidebar>{styles}</Sidebar>*/}
+        <Post>{}</Post>
+      </main>  
+  
   </>
 
 );

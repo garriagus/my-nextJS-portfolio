@@ -1,0 +1,57 @@
+.container {
+  
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espacio interior del contenedor */
+    background-color: #fff; /* Color de fondo del contenedor */
+    border: 1px solid #ccc; /* Borde del contenedor */
+  }
+  .sidebar-button {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 16px;
+    transition: all 0.3s ease;
+    width: 100px;
+  }
+  
+  .sidebar-button:hover {
+    background-color: #666;
+  }
+  
+  .sidebar-content {
+    display: none;
+    padding: 16px;
+    width: 200px;
+  }
+  
+  .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    max-width: 800px;
+    margin: 3rem auto;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 3rem;
+  }
+  .title {
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+  }
+  .paragraf {
+    font-family: OpenSans, sans-serif;
+    font-weight: 300;
+  }
+  @media (max-width: 600px) {
+    .grid {
+      width: 80%;
+      flex-direction: column;
+    }
+  }
+  
