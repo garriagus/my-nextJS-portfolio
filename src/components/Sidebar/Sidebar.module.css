@@ -336,3 +336,37 @@
 #btn2:hover ~ #hide1 {
   display: none
 }
+
+
+.prueba {
+  display : 'block';
+background-color : 'red';
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: #ccc;
+}
+
+.button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.content {
+  width: 80%;
+  background-color: #eee;
+  padding: 20px;
+}

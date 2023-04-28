@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Inter } from "next/font/google";
 
 import styles from "./Sidebar.module.css";
-import Button from "./SidebarButtons";
+import Button from "../Buttons/SidebarButtons";
 import { FaHeart } from "react-icons/fa";
 
 

@@ -6,7 +6,7 @@ import { Inter } from "next/font/google";
 import Sidebar from '../../components/Sidebar/Sidebar'
 
 
-import SidebarButton from '../../components/Sidebar/SidebarButtons'
+import SidebarButton from '../../components/Buttons/SidebarButtons'
 import { FaHeart } from "react-icons/fa";
 
 import HoverContainer from '../../components/Sidebar/HoverContainer'
@@ -28,8 +28,7 @@ return (
     </Head>
 
 
-    <SidebarButton>1</SidebarButton>
-
+    <Sidebar>estoy en un sidebar en un index en app</Sidebar>
   </>
 
 );

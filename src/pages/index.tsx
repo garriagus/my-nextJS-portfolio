@@ -16,8 +16,6 @@ export default function Home() {
       <Head></Head>
       <main className={`${styles.main} ${inter.className}`}>
         <Navbar></Navbar>
-        <Sidebar>{}</Sidebar>
-       
         <div id={styles["show"]}>
           <p>
             Get started by editing&nbsp;
