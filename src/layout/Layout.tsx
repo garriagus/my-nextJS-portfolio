@@ -24,7 +24,7 @@ export default function Layout({ children }) {
     <>
       <main style={styles}>
         <section style={{ width: "1024px" }}>{children}</section>
-        <SideBar />
+        <SideBar>{styles}</SideBar>
       </main>  
     </>
   );
