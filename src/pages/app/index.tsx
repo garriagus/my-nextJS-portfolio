@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 
 import Sidebar from '../../components/Sidebar/Sidebar'
 import Post from '../../components/Posts/PrimerPost'
-
+import Button from '../../components/Buttons/Button'
 import SidebarButton from '../../components/Buttons/SidebarButtons'
 import { FaHeart } from "react-icons/fa";
 
@@ -16,9 +16,7 @@ import styles from "../../components/Sidebar/Sidebar.module.css";
 
 
 export default function index() {
-  const styles = {
-    display: "flex"
-}
+  
 
 return (
 
@@ -30,12 +28,8 @@ return (
       <meta property="og:image" content="https://pbs.twimg.com/media/CCNJN_XUMAAJSzU.jpg:large" />
     </Head>
 
-    <main style={styles}>
-        <section style={{ width: "1024px" }}>{}</section>
-        {/*<Sidebar>{styles}</Sidebar>*/}
-        <Post>{}</Post>
-      </main>  
-  
+    <Button id="p1">{"a"}</Button>    
+    <Button id="p2">{"a"}</Button>   
   </>
 
 );

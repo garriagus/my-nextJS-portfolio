@@ -5,41 +5,41 @@ import { Inter } from "next/font/google";
 
 import styles from "./Sidebar.module.css";
 
-
 import SidebarButton from "../Buttons/SidebarButtons";
+import Button from "../Buttons/Button";
+import Post from "../Posts/PrimerPost";
 
 interface Props {
-    border: string;
-    color: string;
-    children?: React.ReactNode;
-    height: string;
-    onClick: () => void;
-    radius: string
-    width: string;
+  border: string;
+  color: string;
+  children?: React.ReactNode;
+  height: string;
+  onClick: () => void;
+  radius: string;
+  width: string;
 }
-
 
 const inter = Inter({ subsets: ["latin"] });
 const navItems: { label: string; page?: string; link?: string }[] = [
-    { label: "Home", page: "/" },
-    { label: "Blog", page: "/blog" },
-    { label: "Contact", page: "/contact" },
-    { label: "Source Code", link: "https://github.com/ijjk/notion-blog" },
+  { label: "Home", page: "/" },
+  { label: "Blog", page: "/blog" },
+  { label: "Contact", page: "/contact" },
+  { label: "Source Code", link: "https://github.com/ijjk/notion-blog" },
 ];
 
 export default function Sidebar({ children }) {
-    const [isNavExpanded, setIsNavExpanded] = useState(false);
-    /* ejemplos de estados hoocks
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+  /* ejemplos de estados hoocks
         type estilos = {
             display: 'none'
         }
         const [user, setUser]=useState<estilos>({display: 'block'})*/
 
-    /*always update state variable value by calling setStateVariable() method. 
+  /*always update state variable value by calling setStateVariable() method. 
     updating state variable value is asynchronous. You do need to depend on useEffect()
     or useCallback() to get the most updated value of a state variable. */
 
-    /*// with no dependency
+  /*// with no dependency
 
         let count = 0;
 
@@ -58,10 +58,9 @@ export default function Sidebar({ children }) {
 
 }, []);*/
 
+  // with dependency
 
-    // with dependency 
-
-    /* useEffect(() => {
+  /* useEffect(() => {
     
        
         
@@ -75,64 +74,43 @@ export default function Sidebar({ children }) {
         
         }, [stateCount]); */
 
+  const [stateVariable, setStateVariable] = useState(0);
 
+  const handleMouseEnter = (e) => {
+    const button = e.target;
+    document.body.style.backgroundColor = "blue";
+    document.body.style.display = "block";
+    //document.body.id = 'prueba';
+    const contenido = document.getElementById("prueba" + { children });
 
-    const [stateVariable, setStateVariable] = useState(0);
+    //console.log("j");
+  };
+  const handleMouseLeave = (e) => {
+    const button = e.target;
+    // const div = document.querySelector('#prueba');
+    const contenido = document.getElementById("sidebar-content");
+    document.body.style.display = "block";
+    //console.log({ contenido });
+  };
 
+  return (
+    <>
+      <div className={styles.navigation}>
+      <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className={styles.page}
+      >
+        <Button id="p1">{"a"}</Button>
+        <Button id="p2">{"b"}</Button>
+       
+      </div>
 
-
-    const handleMouseEnter = (e) => {
-        const button = e.target;
-        ;
-        document.body.style.backgroundColor = 'blue';
-        //document.body.id = 'prueba';
-        const contenido = document.getElementById("prueba" + { children });
-
-        //  console.log([isNavExpanded, setIsNavExpanded])
-
-    }
-    const handleMouseLeave = (e) => {
-        const button = e.target;
-
-        // const div = document.querySelector('#prueba');
-        const contenido = document.getElementById("prueba");
-
-        document.body.style.backgroundColor = 'green';
-        //  console.log({ setIsNavExpanded })
-    }
-
-    return (
-        <>
-            <div className={styles.wrapper}>
-                <div onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave} className={styles.sidebar}>
-                    <SidebarButton id="p1" >{1}</SidebarButton>
-                    <SidebarButton id="p2" >{2}</SidebarButton>
-                    <SidebarButton
-                        id="p3"
-                        className="nombre de clase"
-                        border="none"
-                        color="pink"
-                        height="200px"
-                        onClick={() => console.log("You clicked on the pink circle!")}
-                        radius="50%"
-                        width="200px"
-                        children="I'm a pink circle!"
-                        display="none"
-                    />
-                </div>
-
-            </div>
-
-            <div className={styles["sidebar-content"]}>
-                <h1 id={styles.c1}>Contenido de la página</h1>
-                <p>Aquí va el contenido de la página que se muestra al lado derecho de los botones.</p>
-            </div>
-
-
-
-
-
-        </>
-    );
+      <div className={styles["sidebar-content"]}>
+        <h1 id={styles.c1}>Contenido de la página</h1>
+        <Post i="p4">{"aaa"}</Post>
+      </div>      
+      </div>
+    </>
+  );
 }
