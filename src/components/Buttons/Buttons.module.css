@@ -1,117 +1,130 @@
-
-#p1 {
-    left: 0;
-  }
-  
-  #p2,
-  #p3,
-  #p4,
-  #p5 {
-    left: 200%;
-  }
-  
-  #p1 {
-    background: darkslateblue;
-  }
-  
-  #p2 {
-    background: darkred;
-  }
-  
-  #p3 {
-    background: gold;
-  }
-  
-  #p4 {
-    background: chocolate;
-  }
-  
-  #p5 {
-    background: tomato;
-  }
-
-  
-#t2:target #p2,
-#t3:target #p3,
-#t4:target #p4,
-#t5:target #p5 {
-    transform: translateX(-190%);
-    -webkit-transform: translateX(-190%);
-    -moz-transform: translateX(-190%);
-    -o-transform: translateX(-190%);
-    transition-delay: .4s !important;
+.body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-#t2:target #p1,
-#t3:target #p1,
-#t4:target #p1,
-#t5:target #p1 {
-    background: black;
+.ul {
+  padding: 0;
+  list-style-type: none;
+    
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100px;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: auto;
+  top: 50%;
+transform: translate(0%, -50%);
 }
 
-#t2:target #p1 .icon,
-#t3:target #p1 .icon,
-#t4:target #p1 .icon,
-#t5:target #p1 .icon {
-    -webkit-filter: blur(3px);
-    filter: blur(1px);
+.li {
+  font-size: 25px;
+  text-align: center;
+  line-height: 2em;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  position: relative;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  
 }
 
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100px;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: auto;
-    top: 50%;
-  transform: translate(0%, -50%);
+.li::before,
+.li::after {
+  content: '';
+  position: absolute;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: rgb(2, 51, 16);
+  border-radius: 50%;
+  transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+  top: calc(50% - 0.6em / 2);
 }
 
-.sidebar-button {
-    background-color: #333;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 16px;
-    transition: all 0.3s ease;
-    width: 100%;
+.li::before {left: 0; z-index: -1;}
+.li::after {right: 0; z-index: -2;}
+
+.li:hover {
+  color: white;
 }
-
-
- 
-#c1 {
+/*_____BUTTON_1_________*/
+.body1, #p1  {
   background: darkslateblue;
+  
 }
 
-#c2 {
-  background: tomato;
+#p1:hover::before,
+#p1:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color:  darkslateblue;
+}
+/*_____BUTTON_2_________*/
+.body2, #p2  {
+  background: darkred;
 }
 
-#c3 {
+#p2:hover::before,
+#p2:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color:  darkred;
+}
+
+/*_____BUTTON_3_________*/
+.body3, #p3  {
   background: gold;
 }
-
-#c4 {
-  background: deeppink;
+#p3:hover::before,
+#p3:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color:  gold;
+}
+/*_____BUTTON_4_________*/
+.body4, #p4  {
+  background: gold;
+}
+#p4:hover::before,
+#p4:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color:  darkblue;
+}
+#p5:hover::before,
+#p5:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color:  brown;
+}
+/*_____BUTTON_5_________*/
+.body5,#p5  {
+  background: gold;
+  
+}
+.li:hover::before {
+  top: 0;
+}
+.li:hover::after {
+  right: -0.4em;
+  filter: brightness(0.8);
 }
 
-#c5 {
-  background: midnightblue;
-}
-
-#prueb{
- display: none;
-}
 
 
-#pruebaa{
-  display:none;
-}
+

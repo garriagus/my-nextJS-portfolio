@@ -275,12 +275,7 @@
 
 }
 
-.sidebar-button:hover,
-.content-overlay,
-.sidebar-content {
-    display: block;
-    
-}
+
 
 .hover-button {
     position: absolute;

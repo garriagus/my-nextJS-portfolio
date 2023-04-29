@@ -27,7 +27,7 @@ const navItems: { label: string; page?: string; link?: string }[] = [
     { label: "Source Code", link: "https://github.com/ijjk/notion-blog" },
 ];
 
-export default function Post({ children }) {
+export default function Post({ children, ...props}) {
     const [isNavExpanded, setIsNavExpanded] = useState(false);
     /* ejemplos de estados hoocks
         type estilos = {
@@ -105,28 +105,15 @@ export default function Post({ children }) {
         <>
 
             <div className={styles.container}>
-                <div className={styles.grid}>
-                    <div className={styles.box}>
-                        <SidebarButton
-                            id="p3"
-                            className="nombre de clase"
-                            border="none"
-                            color="pink"
-                            height="200px"
-                            onClick={() => console.log("You clicked on the pink circle!")}
-                            radius="50%"
-                            width="200px"
-                            children="I'm a pink circle!"
-                            display="none"
-                        />
-                    </div>
+                <div className={styles.grid}>                    
                     <h1 id={styles.title}>Contenido de la página</h1>
-
-
                     <div className={styles["paragraf"]}>
                         <p>Aquí va el contenido de la página que se muestra al lado derecho de los botones.</p>
                         esto es un parrafo
-                    </div>
+                        <button className={styles["sidebar-button"]} id={styles[props.id]}
+                        >{children}</button>
+                    </div>     
+                
 
                 </div>
             </div>
