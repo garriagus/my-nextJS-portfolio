@@ -3,10 +3,10 @@ import { useState } from "react";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 
-import Sidebar from '../../components/Sidebar/Sidebar'
+import Sidebar from '../../components/Sidebar.module.css'
 import Post from '../../components/Posts/PrimerPost'
+import Button from '../../components/Buttons/Button'
 
-import SidebarButton from '../../components/Buttons/SidebarButtons'
 import { FaHeart } from "react-icons/fa";
 
 import HoverContainer from '../../components/Sidebar/HoverContainer'
@@ -33,7 +33,7 @@ return (
     <main style={styles}>
         <section style={{ width: "1024px" }}>{}</section>
         {/*<Sidebar>{styles}</Sidebar>*/}
-        <Post>{}</Post>
+       <Button >{1}</Button>
       </main>  
   
   </>
