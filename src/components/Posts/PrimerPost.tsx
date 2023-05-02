@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 
 import styles from "./Post.module.css";
 
-
+import Image from "next/image";
 import SidebarButton from "../Buttons/SidebarButtons";
 
 interface Props {
@@ -27,7 +27,7 @@ const navItems: { label: string; page?: string; link?: string }[] = [
     { label: "Source Code", link: "https://github.com/ijjk/notion-blog" },
 ];
 
-export default function Post({ children, ...props}) {
+export default function Post({ children, ...props }) {
     const [isNavExpanded, setIsNavExpanded] = useState(false);
     /* ejemplos de estados hoocks
         type estilos = {
@@ -104,25 +104,19 @@ export default function Post({ children, ...props}) {
     return (
         <>
 
-            <div className={styles.container}>
-                <div className={styles.grid}>                    
-                    <h1 id={styles.title}>Contenido de la página</h1>
-                    <div className={styles["paragraf"]}>
-                        <p>Aquí va el contenido de la página que se muestra al lado derecho de los botones.</p>
-                        esto es un parrafo
-                        <button className={styles["sidebar-button"]} id={styles[props.id]}
-                        >{children}</button>
-                    </div>     
-                
-
+            <div id={styles[props.id]} className={styles.parent}>1
+             
+                <div id={styles[props.id]} className={styles.div1}>
+                    {children}
+                </div>
+                <div id={styles[props.id]} className={styles.div2}>
+                Soy autodidacta en este maravilloso mundo de la programación.
+        Utilizo tecnologías como React y Java.
+        Tengo 27 años, actualmente vivo en Argentina.        
+        Soy Licenciado en Gestión Operativa de Construcciones Inteligentes.
+        Soy el autor de esta pagina,  
                 </div>
             </div>
-
-
-
-
-
-
         </>
     );
 }

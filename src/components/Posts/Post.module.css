@@ -1,57 +1,109 @@
-.container {
-  
-    max-width: 800px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    padding: 20px; /* Espacio interior del contenedor */
-    background-color: #fff; /* Color de fondo del contenedor */
-    border: 1px solid #ccc; /* Borde del contenedor */
-  }
-  .sidebar-button {
-    background-color: #333;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 16px;
-    transition: all 0.3s ease;
-    width: 100px;
-  }
-  
-  .sidebar-button:hover {
-    background-color: #666;
-  }
-  
-  .sidebar-content {
-    display: none;
-    padding: 16px;
-    width: 200px;
-  }
-  
-  .grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    max-width: 800px;
-    margin: 3rem auto;
-  }
-  .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    margin-bottom: 3rem;
-  }
-  .title {
-    font-family: OpenSans, sans-serif;
-    font-weight: 400;
-  }
-  .paragraf {
-    font-family: OpenSans, sans-serif;
-    font-weight: 300;
-  }
-  @media (max-width: 600px) {
-    .grid {
-      width: 80%;
-      flex-direction: column;
-    }
-  }
-  
+/*_____BUTTON_1_________*/
+#body1,
+#p1 {
+  background: darkslateblue;
+
+}
+
+#p1:hover::before,
+#p1:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: darkslateblue;
+}
+
+/*_____BUTTON_2_________*/
+#body2,
+#p2 {
+  background: darkred;
+}
+
+#p2:hover::before,
+#p2:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: rgb(177, 94, 94);
+}
+
+/*_____BUTTON_3_________*/
+#body3,
+#p3 {
+  background: gold;
+}
+
+#p3:hover::before,
+#p3:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: gold;
+}
+
+/*_____BUTTON_4_________*/
+#body4,
+#p4 {
+  background: rgb(82, 73, 4);
+}
+
+#p4:hover::before,
+#p4:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: darkblue;
+}
+
+#p5:hover::before,
+#p5:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: brown;
+}
+
+/*_____BUTTON_5_________*/
+#body5,
+#p5 {
+  background: gold;
+
+}
+
+.li:hover::before {
+  top: 0;
+}
+
+.li:hover::after {
+  right: -0.4em;
+  filter: brightness(0.8);
+}
+
+
+#p11,
+#p2,
+#p3,
+#p4,
+#p5 {
+  display: none
+}
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-color: red;
+}
+
+.div1 {
+  grid-area: 1 / 2 / 1 / 7;
+  background-color: yellow;
+}
+
+.div2 {
+  grid-area: 2 / 2 / 6 / 7;
+  background-color: green;
+}

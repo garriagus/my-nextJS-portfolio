@@ -6,8 +6,12 @@ import { Inter } from "next/font/google";
 import styles from "./Sidebar.module.css";
 
 import SidebarButton from "../Buttons/SidebarButtons";
+
+import PersonalCard from "../Posts/PersonalCard";
 import Button from "../Buttons/Button";
 import Post from "../Posts/PrimerPost";
+import { FaBeer, FaArrowRight, FaJava } from 'react-icons/fa';
+import { AiFillGithub } from "react-icons/ai";
 
 interface Props {
   border: string;
@@ -81,36 +85,82 @@ export default function Sidebar({ children }) {
     document.body.style.backgroundColor = "blue";
     document.body.style.display = "block";
     //document.body.id = 'prueba';
-    const contenido = document.getElementById("prueba" + { children });
+    var contenido = document.getElementById("x1");
+    console.log(contenido);
+    return
 
-    //console.log("j");
   };
   const handleMouseLeave = (e) => {
     const button = e.target;
     // const div = document.querySelector('#prueba');
-    const contenido = document.getElementById("sidebar-content");
-    document.body.style.display = "block";
+
+    //document.body.style.display = "block";
     //console.log({ contenido });
+  };
+  const handleClick = () => {
+    const ref = React.useRef(null);
+    // The DOM element is also accessible here.
+    console.log(ref.current);
+  };
+
+
+  const button = (e) => {
+    var numbers = [1, 5, 10, 15];
+    var button = numbers.map(function (x) {
+      return x * 2;
+    })
+
+
+    const pulldata = (data) => {
+      console.log(data); // LOGS DATA FROM CHILD (My name is Dean Winchester... &)
+      return 2;
+    }
+
   };
 
   return (
     <>
-      <div className={styles.navigation}>
-      <div
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        className={styles.page}
-      >
-        <Button id="p1">{"a"}</Button>
-        <Button id="p2">{"b"}</Button>
-       
+      <div id="parent" className={styles.parent}>
+        <div className={styles.div1}> div1 Sidebar</div>
+        <div className={styles.div2}
+        >
+          <Button id='p1'>
+            <AiFillGithub
+              href='a'
+              size={60}>
+            </AiFillGithub>
+          </Button>
+
+          <Button id='p2'>
+            <FaArrowRight href='a'
+              size={60}>
+            </FaArrowRight>
+          </Button>
+
+          <Button id='p3'>
+            <FaJava href='a'
+              size={60}>
+            </FaJava>
+          </Button>
+
+          <Button id='p4'>
+            <FaBeer href='a'
+              size={60}>
+            </FaBeer>
+          </Button>
+
+          <Button id='p5'>
+            <AiFillGithub href='a'
+              size={60}>
+            </AiFillGithub>
+          </Button>
+        </div>
+        <div id="post1"  className={styles.div4}
+          onMouseEnter={button}        >
+          <PersonalCard nombre="a">{}</PersonalCard>        
+        </div>
       </div>
 
-      <div className={styles["sidebar-content"]}>
-        <h1 id={styles.c1}>Contenido de la página</h1>
-        <Post i="p4">{"aaa"}</Post>
-      </div>      
-      </div>
     </>
   );
 }
