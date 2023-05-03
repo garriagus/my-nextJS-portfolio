@@ -27,10 +27,10 @@ export default function Button({ children, ...props }) {
   const handleMouseEnter = (e) => {
     //const button = e.target;
     //document.body.style.backgroundColor = "blue";
-    document.getElementById("post1")!.style.display = "block";
+    //document.getElementById("post1")!.style.display = "block";
     //document.body.style.display = "block";
     //document.body.id = 'prueba';
-    const contenido = document.getElementById(props.id);
+    const contenido = document.getElementById(styles.x1);
     console.log(contenido);
   };
 

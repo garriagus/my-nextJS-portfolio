@@ -8,7 +8,7 @@ export default function Post({ children, ...props }) {
 
       <div className={styles.parent}>
         <div className={styles.div1}>
-          <div className={styles.div2}>
+          <div id={styles[props.id]} className={styles.div2}>
             <article className={styles.card}>
               <h3>Agustín Garrido</h3>
               <p className={styles.p}>

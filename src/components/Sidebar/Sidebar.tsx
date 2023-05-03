@@ -10,7 +10,7 @@ import SidebarButton from "../Buttons/SidebarButtons";
 import PersonalCard from "../Posts/PersonalCard";
 import Button from "../Buttons/Button";
 import Post from "../Posts/PrimerPost";
-import { FaBeer, FaArrowRight, FaJava } from 'react-icons/fa';
+import { FaBeer, FaArrowRight, FaJava } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
 interface Props {
@@ -85,10 +85,9 @@ export default function Sidebar({ children }) {
     document.body.style.backgroundColor = "blue";
     document.body.style.display = "block";
     //document.body.id = 'prueba';
-    var contenido = document.getElementById("x1");
-    console.log(contenido);
-    return
-
+   // var contenido = document.getElementById(styles[props.id]);
+    //console.log(contenido);
+    return;
   };
   const handleMouseLeave = (e) => {
     const button = e.target;
@@ -98,24 +97,20 @@ export default function Sidebar({ children }) {
     //console.log({ contenido });
   };
   const handleClick = () => {
-    const ref = React.useRef(null);
     // The DOM element is also accessible here.
-    console.log(ref.current);
+    console.log(children);
   };
-
 
   const button = (e) => {
     var numbers = [1, 5, 10, 15];
     var button = numbers.map(function (x) {
       return x * 2;
-    })
-
+    });
 
     const pulldata = (data) => {
       console.log(data); // LOGS DATA FROM CHILD (My name is Dean Winchester... &)
       return 2;
-    }
-
+    };
   };
 
   return (
@@ -123,44 +118,32 @@ export default function Sidebar({ children }) {
       <div id="parent" className={styles.parent}>
         <div className={styles.div1}> div1 Sidebar</div>
         <div className={styles.div2}
-        >
-          <Button id='p1'>
-            <AiFillGithub
-              href='a'
-              size={60}>
-            </AiFillGithub>
+          >
+          <Button id="p1" 
+          >
+            <AiFillGithub href="a" size={60}></AiFillGithub>
           </Button>
 
-          <Button id='p2'>
-            <FaArrowRight href='a'
-              size={60}>
-            </FaArrowRight>
+          <Button id="p2">
+            <FaArrowRight href="a" size={60}></FaArrowRight>
           </Button>
 
-          <Button id='p3'>
-            <FaJava href='a'
-              size={60}>
-            </FaJava>
+          <Button id="p3">
+            <FaJava href="a" size={60}></FaJava>
           </Button>
 
-          <Button id='p4'>
-            <FaBeer href='a'
-              size={60}>
-            </FaBeer>
+          <Button id="p4">
+            <FaBeer href="a" size={60}></FaBeer>
           </Button>
 
-          <Button id='p5'>
-            <AiFillGithub href='a'
-              size={60}>
-            </AiFillGithub>
+          <Button id="p5">
+            <AiFillGithub href="a" size={60}></AiFillGithub>
           </Button>
         </div>
-        <div id="post1"  className={styles.div4}
-          onMouseEnter={button}        >
-          <PersonalCard nombre="a">{}</PersonalCard>        
+        <div className={styles.div4} onMouseEnter={button}>
+          <PersonalCard id="x1" nombre="a">{}</PersonalCard>
         </div>
       </div>
-
     </>
   );
 }
