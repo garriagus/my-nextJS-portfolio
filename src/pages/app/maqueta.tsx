@@ -12,14 +12,14 @@ import Head from '../../components/Head/Head'
 import Navbar from '../../components/Navbar/Navbar'
 import Sidebar from '../../components/Sidebar/Sidebar'
 
-import Button from '../../components/Buttons/Button'
+import Button from '../../components/Pruebas/Button'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
     return (
         <>
-      
+     <Button>boton</Button>
         </>
     )
 }

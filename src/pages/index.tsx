@@ -7,6 +7,7 @@ import styles from '@/styles/Home.module.css'
 import Head from '../components/Head/Head'
 import Navbar from '../components/Navbar/Navbar'
 import Sidebar from '../components/Sidebar/Sidebar'
+import Button from '../components/Pruebas/Button'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +16,6 @@ export default function Home() {
     <>
       <Head></Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Navbar></Navbar>
         <div id={styles["show"]}>
           <p>
             Get started by editing&nbsp;
@@ -49,6 +49,7 @@ export default function Home() {
             height={37}
             priority
           />
+          <Button>boton</Button>
         </div>
 
        
