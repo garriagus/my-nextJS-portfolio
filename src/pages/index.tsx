@@ -15,7 +15,18 @@ export default function Home() {
   return (
     <>
       <Head></Head>
+      <div className={styles.background} style={{
+          backgroundImage: `url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Grass_at_a_lawn_with_morning_dew_02.jpg")`,
+          height: '100vh',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+        }}>
+
+       
       <main className={`${styles.main} ${inter.className}`}>
+
+      <Navbar></Navbar>
+      <Sidebar>{ }</Sidebar>
         <div id={styles["show"]}>
           <p>
             Get started by editing&nbsp;
@@ -39,20 +50,9 @@ export default function Home() {
             </a>
           </div>
         </div>
+   
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <Button>boton</Button>
-        </div>
 
-       
         <div className={styles.grid}>
           <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -111,7 +111,7 @@ export default function Home() {
             </p>
           </a>
         </div>
-      </main>
+      </main></div>
     </>
   )
 }

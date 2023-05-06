@@ -10,16 +10,18 @@ import { AiFillGithub } from "react-icons/ai";
 // My components
 import Head from '../../components/Head/Head'
 import Navbar from '../../components/Navbar/Navbar'
-import Sidebar from '../../components/Sidebar/Sidebar'
-
+import Sidebar from '../../components/Sidebar/HoverContainer'
+import Footer from '../../components/Footer/Footer'
 import Button from '../../components/Pruebas/Button'
 
+import Card from '../../components/Pruebas/Card'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
     return (
         <>
-     <Button>boton</Button>
+        
+       <Card>{}</Card>
         </>
     )
 }

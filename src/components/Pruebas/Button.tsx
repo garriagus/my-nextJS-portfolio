@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import styles from './Button.module.css';
 import Card from './Card';
+import PersonalCard from '../../components/Posts/PersonalCard'
 
-const Button = ({ children }) => {
+
+export default function Button({ children, ...props }) {
   const [showCard, setShowCard] = useState(false);
 
   const handleMouseOver = () => {
@@ -12,13 +14,23 @@ const Button = ({ children }) => {
   const handleMouseOut = () => {
     setShowCard(false);
   };
-
+  {/*    */ }
   return (
-    <button className={styles.button} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-      {children}
-      {showCard && <Card />}
-    </button>
+    <>
+      <div className={styles.parent}
+        onMouseEnter={handleMouseOver}
+        onMouseLeave={handleMouseOut}>
+        <div className={styles.button}>
+          <button id={styles[props.id]} className={styles.button}>
+            {children}
+          </button>
+        </div>
+        <div className={styles.cardContainer}>
+          <div className={styles.content}>
+            {showCard && <PersonalCard id={styles[props.id]}>{ }</PersonalCard>}
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
-
-export default Button;

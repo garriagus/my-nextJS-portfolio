@@ -1,13 +1,128 @@
+.parent {
+  transition: left 1.5s ease-in-out;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+
+}
+
 .button {
-  background-color: #4CAF50; /* Cambiar por el color que desees */
-  color: white;
+  border: 1px solid #7c0000;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007acc;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.div1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 90px;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.div2 {
+  grid-area: 0 / 0 / 0 / 0;
+  border: 1px solid #979090;
   border: none;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
   position: relative;
+}
+
+
+.div3 {
+  grid-area: 2 / 2 / 5 / 6;
+}
+
+.cardContent {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 16px;
+  min-width: 200px;
+}
+
+
+
+#b1 {
+  background: darkslateblue;
+}
+
+#b2 {
+  background: tomato;
+}
+
+#b3 {
+  background: gold;
+}
+
+#b4 {
+  background: deeppink;
+}
+
+#b5 {
+  background: midnightblue;
+}
+
+
+
+@keyframes go-back {
+  0% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.buttonContainer {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  display: inline-block;
+}
+
+.button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007acc;
+ 
+  
+}
+
+
+.cardContainer {
+  position: absolute;
+
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }

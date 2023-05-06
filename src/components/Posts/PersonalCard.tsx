@@ -2,7 +2,7 @@ import styles from './card.module.css'
 
 
 
-export default function Post({ children, ...props }) {
+export default function PersonalCard({ children, ...props }) {
   return (
     <>
 
@@ -12,8 +12,7 @@ export default function Post({ children, ...props }) {
             <article className={styles.card}>
               <h3>Agustín Garrido</h3>
               <p className={styles.p}>
-                Soy autodidacta en este maravilloso mundo de la programación.
-                Utilizo tecnologías como React y Java.
+                Utilizo tecnologías React y Java.
                 Tengo 27 años, actualmente vivo en Argentina.
                 Soy Licenciado en Gestión Operativa de Construcciones Inteligentes.
                 Soy el autor de esta pagina,

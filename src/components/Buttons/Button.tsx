@@ -39,7 +39,7 @@ export default function Button({ children, ...props }) {
     // const div = document.querySelector('#prueba');
     const contenido = document.getElementById("sidebar-content");
     document.body.style.display = "block";
-    //console.log("soy un boton " + { button });
+    console.log("soy un boton ");
   };
   return (
     <>

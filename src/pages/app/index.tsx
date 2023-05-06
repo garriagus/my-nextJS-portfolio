@@ -11,14 +11,15 @@ import Navbar from '../../components/Navbar/Navbar'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import PersonalCard from '../../components/Posts/PersonalCard'
 import Post from '../../components/Posts/PrimerPost'
-import Button from '../../components/Buttons/Button'
+import Button from '../../components/Pruebas/Button'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <>
-<Sidebar>{}</Sidebar>
+
+<PersonalCard>{"a"}</PersonalCard>
     </>
   )
 }
