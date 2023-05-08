@@ -21,12 +21,12 @@ export default function Home() {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
         }}>
-
-       
+        <Navbar></Navbar>
+        <Sidebar>{ }</Sidebar>
       <main className={`${styles.main} ${inter.className}`}>
 
-      <Navbar></Navbar>
-      <Sidebar>{ }</Sidebar>
+     
+      
         <div id={styles["show"]}>
           <p>
             Get started by editing&nbsp;

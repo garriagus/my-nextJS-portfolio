@@ -6,43 +6,46 @@ import { Inter } from "next/font/google";
 import styles from "./Sidebar.module.css";
 
 import Button from "../Pruebas/Button";
-
-import PersonalCard from "../Pruebas/Card";
+import PersonalCard from '../../components/Posts/PersonalCard'
 
 import Post from "../Posts/PrimerPost";
 import { FaBeer, FaArrowRight, FaJava } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
-
-
 export default function Sidebar({ children }) {
- 
+  const [showCard, setShowCard] = useState(false);
+
+  const handleMouseOver = () => {
+    const contenido = document.getElementById("b1");
+    console.log(contenido)
+    setShowCard(false);
+  };
+
+  const handleMouseOut = () => {
+    setShowCard(false);
+  };
+  {/*    */ }
   return (
     <>
-  
-
-
-          <Button id="b1">
-            <AiFillGithub href="a" size={60}></AiFillGithub>
-          </Button>
-
+      <div className={styles.parent}>
+        <div id={styles.b1} className={styles.button}>
+          <div id="b1">
+            <Button id="b1">
+              <PersonalCard id={styles["id"]}>{ }</PersonalCard>
+            </Button>
+          </div>
           <Button id="b2">
-            <FaArrowRight href="a" size={60}></FaArrowRight>
+            <PersonalCard id={styles["id"]}>{ }</PersonalCard>
           </Button>
-
           <Button id="b3">
-            <FaJava href="a" size={60}></FaJava>
+            <PersonalCard id={styles["id"]}>{ }</PersonalCard>
           </Button>
-
           <Button id="b4">
-            <FaBeer href="a" size={60}></FaBeer>
+            <PersonalCard id={styles["id"]}>{ }</PersonalCard>
           </Button>
+        </div>
 
-          <Button id="b5">
-            <AiFillGithub href="a" size={60}></AiFillGithub>
-          </Button>
-   
-      
+      </div>
     </>
   );
 }

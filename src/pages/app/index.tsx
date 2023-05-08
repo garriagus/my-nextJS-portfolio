@@ -18,8 +18,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <>
-
-<PersonalCard>{"a"}</PersonalCard>
+  <Sidebar>{}</Sidebar>
     </>
   )
 }
