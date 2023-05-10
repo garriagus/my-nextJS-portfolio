@@ -1,59 +1,37 @@
+import styles from './Post.module.css'
+import Image from 'next/image';
+import Profile from './../../../public/profile.jpg';
 
-export default function Post({ children }) {
+export default function Post({ children, ...props }) {
     {/*    */ }
     return (
         <>
-            {/*___________Post 1 ___________*/}
-            <div className="page" id="p1">
-                <section className="icon fa fa-bolt">
-                    <span className="title">Agustín Garrido</span>
-                    <span className="hint">Full Stack Developer<br></br>
-                        Java & React Js
-                    </span>
-                </section>
-            </div>
-            {/*___________Post 2 ___________*/}
-            <div className="page" id="p2">
-                <section className="icon fa fa-bolt"><span className="title">Bolt</span><span className="hint">Like this pen to see the magic!...<br></br> Just kidding, it won't happen anything but I'll be really happy If you do so.</span></section>
-            </div>
-            <div className="page" id="p2">
-                <section className="icon fa fa-keyboard-o">
-                    <span className="title">Java</span>
-                    <span className="hint">Aquí se encuentran mis proyectos con Java<br></br>
-                        En construcción...
-                    </span>
-                </section>
-            </div>
-            {/*___________Post 3 ___________*/}
-            <div className="page" id="p3">
-                <section className="icon fa fa-rocket">
-                    <span className="title">Next Js</span>
-                    <span className="hint">Aquí se encuentran mis proyectos con Next Js<br></br>
-                        En construcción...
-                    </span>
-                </section>
-            </div>
-            {/*___________Post 4 ___________*/}
-            <div className="page" id="p4">
-                <section className="icon fa fa-dribbble">
-                    <span className="title">Mis redes Sociales</span>
-                    <p className="hint">
-                        <a href="https://github.com/garriagus" target="_blank">En construccion...<span className="hint line-trough">Hecho por </span> @garriagus</a>
-                    </p>
-                    <p className="hint">Already invited by <a href="https://github.com/garriagus" target="_blank">Stan Peters</a></p>
-                </section>
-            </div>
-            {/*___________Post 5 ___________*/}
-            <div className="page" id="p5">
-                <section className="icon fa fa-plus-circle">
-                    <span className="title">Github</span>
-                    <p className="hint">
-                        <span>Accede a mis repositorios de Github </span><br />
-                        <a href="https://github.com/garriagus" target="_blank">check this pprojects here</a>
-                    </p>
-                </section>
-            </div>
+            <div id={styles.body}>
+                <div className={styles.box}>
 
+                    <div className={styles.card}>
+                        <Image
+                            src={Profile}
+                            width={500}
+                            height={500}
+                            alt="Picture of the author"
+                        />
+                       FullStack Developer 
+                    </div>
+                    <a href="https://github.com/garriagus/" target="_blank">GitHub</a>
+
+                    <h1>Agustín Garrido</h1>
+                    <h5>Java & Spring Boot <br /> React & Next Js</h5>
+                    <p>Soy Licenciado en Gestión Operativa de Construcciones Inteligentes y utilizo tecnologías como Java con Spring Boot y Next Js para realizar aplicaciones web.
+                        También realizo proyectos IoT para domótica, en los cuales utilizo C++, Node Red, mqtt, influx y Mongodb.
+                    </p>
+                    <ul className={styles.ul}>
+                        <li><a href="https://twitter.com/" target="_blank"><i className="fab fa-twitter-square"></i></a></li>
+                        <li><a href="https://codepen.io/" target="_blank"><i className="fab fa-codepen"></i></a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank"><i className="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
         </>
     );
 }

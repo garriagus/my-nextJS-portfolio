@@ -1,28 +1,30 @@
-
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import Image from 'next/image'
 
 // My components
 import Head from '../components/Head/Head'
 import Navbar from '../components/Navbar/Navbar'
-import PostContainer from '../components/Pruebas/Posts/PostContainer'
+import Sidebar from '../components/Sidebar/Sidebar'
+
+import Background from '../../public/mountains.jpg'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <>
       <Head></Head>
-      <div className={styles.background} style={{
-        backgroundImage: `url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Grass_at_a_lawn_with_morning_dew_02.jpg")`,
-        height: '100vh',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-      }}>
-        <main >
-          <PostContainer></PostContainer>
-        </main>
-        </div>
+      <Image
+          src={Background}
+          layout='fill'   
+          alt="Picture of the author"          >
+
+        </Image>        
+     
+          <Sidebar>{ }</Sidebar>
+
+    
     </>
   )
 }
