@@ -6,7 +6,6 @@ import { Inter } from "next/font/google";
 import styles from "./Post.module.css";
 
 import Image from "next/image";
-import SidebarButton from "../Pruebas/SidebarButtons";
 
 interface Props {
     border: string;

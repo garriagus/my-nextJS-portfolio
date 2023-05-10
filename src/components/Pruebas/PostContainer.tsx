@@ -8,13 +8,9 @@ import { AiFillGithub } from "react-icons/ai";
 import { BiBody } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
 // My components
-import Head from '../../components/Head/Head'
-import Navbar from '../../components/Navbar/Navbar'
-import Sidebar from '../../components/Sidebar/HoverContainer'
-import Footer from '../../components/Footer/Footer'
-import Button from '../../components/Buttons/Button'
+import Button from '../Buttons/Button'
 
-import Card from '../../components/Posts/PersonalCard'
+import Card from './PersonalCard'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function PostContainer(children) {

@@ -3,7 +3,7 @@ import styles from './Button.module.css';
 import { FaBeer, FaArrowRight, FaJava, FaIcons } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import Card from './Card';
-import PersonalCard from '../../components/Posts/PersonalCard'
+import PersonalCard from './Posts/PersonalCard'
 import { icons } from 'react-icons/lib';
 
 

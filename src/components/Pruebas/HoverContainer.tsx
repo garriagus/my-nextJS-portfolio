@@ -7,9 +7,9 @@ import styles from "./Sidebar.module.css";
 
 import SidebarButton from "../Pruebas/SidebarButtons";
 
-import PersonalCard from "../Posts/PersonalCard";
+import PersonalCard from "./Posts/PersonalCard";
 import Button from "../Pruebas/Button";
-import Post from "../Posts/PrimerPost";
+import Post from "./Posts/PrimerPost";
 import { FaBeer, FaArrowRight, FaJava } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
