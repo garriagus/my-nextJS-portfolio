@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 
 import styles from "./Sidebar.module.css";
 
-import SidebarButton from "../Buttons/SidebarButtons";
+import SidebarButton from "../Pruebas/SidebarButtons";
 
 import PersonalCard from "../Posts/PersonalCard";
 import Button from "../Pruebas/Button";
