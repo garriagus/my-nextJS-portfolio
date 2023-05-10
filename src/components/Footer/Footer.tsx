@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styles from './Footer.module.css';
-import Card from '../Pruebas/Card';
-
+import { TbH1 } from 'react-icons/tb';
 
 export default function Footer({ children, ...props }) {
   const [showCard, setShowCard] = useState(false);
@@ -41,7 +40,7 @@ export default function Footer({ children, ...props }) {
   </div>
 </div>
       <div className={styles.cardas}>
-      {showCard && <Card>{ }</Card>}
+      {showCard && <h1>hola</h1>}
 </div>
     </>
   );
