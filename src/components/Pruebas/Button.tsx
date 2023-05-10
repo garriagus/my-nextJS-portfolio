@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Children, useState } from 'react';
 import styles from './Button.module.css';
 import { FaBeer, FaArrowRight, FaJava, FaIcons } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
@@ -20,6 +20,7 @@ export default function Button({ children, ...props }) {
 
   const handleMouseOver = () => {
     setShowCard(true);
+    console.log(props.icon)
   };
 
   const handleMouseOut = () => {
@@ -29,25 +30,21 @@ export default function Button({ children, ...props }) {
   return (
     <>
 
+      <div className={styles.column}
+        onMouseEnter={handleMouseOver}
+        onMouseLeave={handleMouseOut}>
+        <div className={styles.button}>
+          <button id={styles[props.id]} className={styles.button}>
 
-      <div className={styles.parent}>
-        <div className={styles.div2}>
-          <div className={styles.column}
-            onMouseEnter={handleMouseOver}
-            onMouseLeave={handleMouseOut}>
-            <div className={styles.button}>
-              <button id={styles[props.id]} className={styles.button}>
-                <FaBeer size="40px" />
-              </button>
-            </div>
-          </div>
+          </button>
         </div>
-        
-        <div className={styles.div3}>
-          <div className={styles.cardContainer}>
-            <div className={styles.content}>
-              {showCard && children}
-            </div>
+      </div>
+
+
+      <div className={styles.div3}>
+        <div className={styles.cardContainer}>
+          <div className={styles.content}>
+            {showCard && children}
           </div>
         </div>
       </div>
