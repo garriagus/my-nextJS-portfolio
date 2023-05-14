@@ -15,29 +15,25 @@ import PersonalCard from "../Cards/PersonalCard";
 
 export default function Sidebar({ children }) {
 
-    const [activeId, setActiveId] = useState<string | null>(null);
-    const [showContent, setShowContent] = useState<boolean>(false);
     const [content, setContent] = useState<React.ReactNode>(null);
 
     const handleMouseEnter = (id) => {
-        //  setShowContent(prevState => !prevState);
-        const elem = document.getElementsByClassName(id)
-        console.log(elem)
+        const components = {
+            0: <PersonalCard children={undefined} />,
+            1: <JavaCard children={undefined} />,
+            2: <IoTCard children={undefined} />,
+            3: < GithubCard children = { undefined } />,
+        }
+
         setContent(components[id])
     }
-
-    const components = [<PersonalCard id="p2">hola</PersonalCard>,
-    <JavaCard id="p2">hola</JavaCard>,
-    <IoTCard id="p2">hola</IoTCard>,
-    <GithubCard id="p2">hola</GithubCard>];
-
 
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.sidebar}>
                     <div onMouseEnter={() => { handleMouseEnter(0) }}>
-                        <Button active={activeId} id="one" className="button-1" icon={<AiOutlineUser style={{ color: 'white', fontSize: '30px' }} ></AiOutlineUser>}>
+                        <Button id="one" className="button-1" icon={<AiOutlineUser style={{ color: 'white', fontSize: '30px' }} ></AiOutlineUser>}>
                         </Button>
                     </div>
 
