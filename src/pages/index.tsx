@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Head from '../components/Head/Head'
 import Navbar from '../components/Navbar/Navbar'
 import Sidebar from '../components/Sidebar/Sidebar'
+import Layout from '../components/layout/Layout'
 
 import Background from '../../public/mountains.jpg'
 
@@ -22,7 +23,7 @@ export default function Home() {
 
         </Image>        
      
-          <Sidebar>{ }</Sidebar>
+          <Layout>{ }</Layout>
 
     
     </>
