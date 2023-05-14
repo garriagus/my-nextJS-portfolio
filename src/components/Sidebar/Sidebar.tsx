@@ -9,10 +9,10 @@ import GithubCard from "../Cards/GithubCard";
 import PersonalCard from "../Cards/PersonalCard";
 
 const components = {
-    0: <PersonalCard children={undefined} />,
-    1: <JavaCard children={undefined} />,
-    2: <IoTCard children={undefined} />,
-    3: < GithubCard children = { undefined } />,
+    0: <PersonalCard />,
+    1: <JavaCard />,
+    2: <IoTCard />,
+    3: < GithubCard />,
 }
 
 export default function Sidebar({ children }) {
@@ -28,21 +28,22 @@ export default function Sidebar({ children }) {
             <div className={styles.container}>
                 <div className={styles.sidebar}>
                     <div onMouseEnter={() => { handleMouseEnter(0) }}>
-                        <Button id="one" >
+                        <Button id="one" className="button-1" icon="AiOutlineUser">
                         </Button>
                     </div>
                     <div onMouseEnter={() => { handleMouseEnter(1) }}>
-                        <Button id="two" >
+                        <Button id="two" className="button-1" icon="FaJava">
                         </Button>
                     </div>
                     <div onMouseEnter={() => { handleMouseEnter(2) }}>
-                        <Button id="tree" >
+                        <Button id="tree" className="button-1" icon="TbBrandNextjs">
                         </Button>
                     </div>
                     <div onMouseEnter={() => { handleMouseEnter(3) }}>
-                        <Button id="four" >
+                        <Button id="four" className="button-1" icon="AiFillGithub">
                         </Button>
                     </div>
+
                 </div>
 
                 {content}

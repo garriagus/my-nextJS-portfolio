@@ -2,7 +2,7 @@ import styles from './Card.module.css'
 import Image from 'next/image';
 import Profile from './../../../public/profile.jpg';
 
-export default function PersonalCard({ children, ...props }) {
+export default function PersonalCard({ ...props }) {
     {/*    */ }
     return (
         <>
