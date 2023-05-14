@@ -19,7 +19,7 @@ const components = {
 }
 
 
-export default function Button({ children, ...props }) {
+export default function Button({...props }) {
 
   return (
     <>
