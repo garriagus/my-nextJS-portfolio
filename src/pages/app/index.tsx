@@ -14,7 +14,7 @@ import Head from '../../components/Head/Head'
 import Navbar from '../../components/Navbar/Navbar'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import Button from '../../components/Buttons/Button'
-import Card from "../../components/Posts/Card";
+import Card from "../../components/Cards/PersonalCard";
 
 import PostContainer from "../../components/Posts/PostContainer";
 
@@ -23,7 +23,16 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <>
-      <Sidebar>{ }</Sidebar>
+
+
+      <Button id="one" className="button-1" icon={<AiOutlineUser style={{ color: 'black', fontSize: '30px' }} ></AiOutlineUser>}>
+      <Button id="one" className="button-1" icon={<AiOutlineUser style={{ color: 'black', fontSize: '30px' }} ></AiOutlineUser>}>
+      
+      </Button>
+
+        {<Card>{}</Card>}
+      </Button>
+
     </>
   )
 }

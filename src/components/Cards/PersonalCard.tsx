@@ -6,7 +6,7 @@ export default function PersonalCard({ children, ...props }) {
     {/*    */ }
     return (
         <>
-            <div   id={`${styles[""]} ${styles[props.id]} ${styles["body"]} `} >
+         
                 <div className={styles["container"]}>
                     <div className={styles["card"]}>
                         <div className={`${styles["font"]} ${styles["side"]}`}>
@@ -25,9 +25,6 @@ export default function PersonalCard({ children, ...props }) {
 
                     </div>
                 </div>
-            </div>
-
-
-        </>
+                     </>
     );
 }

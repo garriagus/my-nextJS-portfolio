@@ -13,48 +13,55 @@ import PersonalCard from "../Cards/PersonalCard";
 
 export default function Button({ children, ...props }) {
 
-  const [showCard, setShowCard] = useState(false);
-  const [activeId, setActiveId] = useState("zero");
+  const [actualId, setActualId] = useState<string | null>(null);
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const [showContent, setShowContent] = useState(false);
+  const [content, setContent] = useState<React.ReactNode>(null);
 
-  const handleMouseOver = (id) => {
-    setShowCard(false);
-   setActiveId(props.id);
-   
-   console.log(props.id)
-    if (["one", "two", "three", "four"].includes(activeId)) {
-     
-      console.log(props.id)
+  const components = [<PersonalCard id="p1">hola</PersonalCard>,
+  <JavaCard id="p2">hola</JavaCard>,
+  <IoTCard id="p2">hola</IoTCard>,
+  <GithubCard id="p2">hola</GithubCard>];
+
+  const handleMouseEnter = (id: string) => {
+    //  setShowContent(prevState => !prevState);
+    switch (props.id) {
+      case "one":
+        props.activeId="one";
+        console.log("a")
+        break;
+      case "two":
+        break
+        break;
+      case "three":
+        break
+        break;
+      case "four":
+        break
+        break;
+      case "five":
+        break
+        break;
+      default:
+        break
     }
+   
+    //  console.log(activeId)
+    setShowContent(prevState => !prevState);
   };
-
-  const handleMouseOut = () => {
-    setShowCard(false);
-    //setActiveId(null);
+  const handleMouseLeave = () => {
+    setShowContent(false);
   };
-
-
-
   return (
     <>
-
-      <div >
-        <div  
-        onMouseEnter={() => handleMouseOver(props.id)}
-      //  onMouseLeave={handleMouseOut}
-          className={`${styles["custom-btn"]} ${styles[props.className]} ${styles["button"]} `}
-        >{children}
-        </div>
+      <div 
+      //onMouseEnter={() => { handleMouseEnter("a") }}
+        className={`${styles["custom-btn"]} ${styles[props.className]} ${styles["button"]} `}
+      >{props.icon}
       </div>
 
-    
-        <div className="container">
-      
-        {activeId == "one" && <PersonalCard id="p2">hola</PersonalCard>}
-        
-      </div>
-
+ 
     </>
-  );
+  )
 }
-
 
