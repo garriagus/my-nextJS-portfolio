@@ -11,16 +11,23 @@ import IoTCard from "../Cards/IoTCard";
 import GithubCard from "../Cards/GithubCard";
 import PersonalCard from "../Cards/PersonalCard";
 
+const components = {
+  "AiOutlineUser": <AiOutlineUser style={{ color: 'white', fontSize: '30px' }} />,
+  "FaJava": <FaJava style={{ color: 'white', fontSize: '30px' }} />,
+  "TbBrandNextjs": <TbBrandNextjs style={{ color: 'white', fontSize: '30px' }} />,
+  "AiFillGithub": <AiFillGithub style={{ color: 'white', fontSize: '30px' }} />,
+}
+
+
 export default function Button({ children, ...props }) {
+
   return (
     <>
-      <div 
-      //onMouseEnter={() => { handleMouseEnter("a") }}
-        className={`${styles["custom-btn"]} ${styles[props.className]} ${styles["button"]} `}
-      >{props.icon}
+      <div className={`${styles["custom-btn"]} ${styles[props.className]} ${styles["button"]} `}
+      >{components[props.icon]}
       </div>
 
- 
+
     </>
   )
 }
