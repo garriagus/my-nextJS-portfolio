@@ -28,19 +28,19 @@ export default function Sidebar({ children }) {
             <div className={styles.container}>
                 <div className={styles.sidebar}>
                     <div onMouseEnter={() => { handleMouseEnter(0) }}>
-                        <Button id="one" className="button-1" icon="AiOutlineUser">
+                        <Button id="one" >
                         </Button>
                     </div>
                     <div onMouseEnter={() => { handleMouseEnter(1) }}>
-                        <Button id="two" className="button-1" icon="FaJava">
+                        <Button id="two" >
                         </Button>
                     </div>
                     <div onMouseEnter={() => { handleMouseEnter(2) }}>
-                        <Button id="tree" className="button-1" icon="TbBrandNextjs">
+                        <Button id="tree" >
                         </Button>
                     </div>
                     <div onMouseEnter={() => { handleMouseEnter(3) }}>
-                        <Button id="four" className="button-1" icon="AiFillGithub">
+                        <Button id="four" >
                         </Button>
                     </div>
                 </div>
