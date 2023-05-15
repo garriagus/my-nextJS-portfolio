@@ -16,15 +16,9 @@ export default function Home() {
   return (
     <>
       <Head></Head>
-      <Image
-          src={Background}
-          layout='fill'   
-          alt="Picture of the author"          >
-
-        </Image>        
-     
+    
           <Layout>{ }</Layout>
-
+      
     
     </>
   )

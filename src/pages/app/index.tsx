@@ -24,14 +24,7 @@ export default function Home() {
   return (
     <>
 
-
-      <Button id="one" className="button-1" icon={<AiOutlineUser style={{ color: 'black', fontSize: '30px' }} ></AiOutlineUser>}>
-      <Button id="one" className="button-1" icon={<AiOutlineUser style={{ color: 'black', fontSize: '30px' }} ></AiOutlineUser>}>
-      
-      </Button>
-
-        {<Card>{}</Card>}
-      </Button>
+<Navbar></Navbar>
 
     </>
   )

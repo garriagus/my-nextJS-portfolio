@@ -24,7 +24,6 @@
   width: 150px;
   text-align: center;
   font-size: 16px;
-  opacity: .9;
   transition: all 0.3s ease;
   position: absolute;
 }
@@ -52,7 +51,6 @@
   display: inline-flex;
   display: flex; 
   width: 150px;
-  opacity: .9;
   transition: all 0.3s ease;
 }
 
@@ -64,12 +62,10 @@
 
 /* Estilos cuando el mouse NO está encima del sidebar */
 .sidebar:not(:hover) {
-  width: 50px;
-  opacity: .1;
+  width: 120px; 
 
 }
 
 .button:not(:hover) {
-  opacity: .6;
   width: 0px;
 }
