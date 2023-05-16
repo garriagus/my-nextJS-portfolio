@@ -28,8 +28,6 @@ export default function Button({...props }) {
        ${styles[props.className]} ${styles["button"]} `}
       >{components[props.icon]}
       </div>
-
-
     </>
   )
 }

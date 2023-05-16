@@ -50,46 +50,46 @@ const NavBar = () => {
   }
   return (
     <>
-
-
       <div className={styles["nav"]}>
-
-
         <div className={styles["nav-header"]}>
           <div className={styles["nav-title"]}>
-            <div className={styles.button}
-              onMouseEnter={() => { setShowContent(!showContent) }}
+            {/*  <div className={styles.button}
+              onClick={() => { setShowContent(!showContent) }}
             >
-              <Button id="one" className="button-1" icon="FaArrowRight">
+              <Button id="one" className="button-12" icon="FaArrowRight">
               </Button>
-            </div>
+            </div>*/}
           </div>
         </div>
         <div className={styles["nav-btn"]} >
-          <label htmlFor="nav-check">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
+          <Button id="one" className="button-1" icon="FaArrowRight">
+          </Button>
+          <Button id="one" className="button-12" icon="FaArrowRight">
+          </Button>
+          <Button id="one" className="button-12" icon="FaArrowRight">
+          </Button>
         </div>
         <div className={styles["nav-links"]}>
           <Link
             href='/contact'
             className={currentRoute === '/contact' ? styles.active : styles.nonActive}
           >
-            Home
+            <Button id="one" className="button-1" icon="FaArrowRight">
+            </Button>
           </Link>
           <Link
             href='/contact'
             className={currentRoute === '/contact' ? styles.active : styles.nonActive}
           >
-            Contact
+            <Button id="one" className="button-1" icon="FaArrowRight">
+            </Button>
           </Link>
           <Link
             href='/contact'
             className={currentRoute === '/contact' ? styles.active : styles.nonActive}
           >
-            Contact
+            <Button id="one" className="button-1" icon="FaArrowRight">
+            </Button>
           </Link>
         </div>
       </div>

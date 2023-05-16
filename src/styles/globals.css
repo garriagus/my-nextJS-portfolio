@@ -38,6 +38,13 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color-html: #FF3D00;
+  --animation-color-css: #304FFE;
+  --animation-color-js: #FFD740;
+  --fs-size: 3em;
 }
 
 @media (prefers-color-scheme: dark) {

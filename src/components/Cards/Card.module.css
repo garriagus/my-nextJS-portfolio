@@ -1,34 +1,41 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300';
 
-#container { background: #757575; overflow-x: hidden; }
+#container {
+  background: #757575;
+  overflow-x: hidden;
+}
+
 .container {
   perspective: 800px;
-  box-sizing: border-box;   
-  /* Styling */  
+  box-sizing: border-box;
+  /* Styling */
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 4px;  
+  letter-spacing: 4px;
   /* Center it */
-  position: absolute;
-  top: 200px;
-  left: 450px;
+  position: fixed;
+  top: 50%;
+  left: 75%;
   transform: translate(-50%, -50%);
- 
-  max-width: 600px; /* opcional: establece un ancho máximo */
+  max-width: 100%;
+  width: 90%;
+  /* Opcional: ajusta el ancho según sea necesario */
 }
+
 .card {
   /* Styling */
   width: 600px;
   height: 400px;
   max-width: 600px;
   background: rgb(0, 0, 0);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);  
- 
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
   /* Card flipping effects */
   transform-style: preserve-3d;
-  transition: 0.6s; 
+  transition: 0.6s;
 }
+
 .side {
   position: absolute;
   width: 100%;
@@ -47,14 +54,16 @@
 /* Front styling */
 .front {
   /* Center the name + outline (almost) */
-  line-height: 390px; /* Height - some (because visual center is a little higher than actual center) */
+  line-height: 390px;
+  /* Height - some (because visual center is a little higher than actual center) */
   text-align: center;
 }
+
 .logo {
   outline: 1px solid #19F6E8;
   display: inline-block;
   padding: 15px 40px;
-  
+
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   font-size: 1.4em;
@@ -69,36 +78,61 @@
   padding: 30px;
   opacity: .7;
 }
+
 .name {
   color: #3B3B3B;
   margin-bottom: 0;
 }
+
 .p {
   margin: 0.8em 0;
 }
+
 .info {
   position: absolute;
   bottom: 30px;
   left: 30px;
   color: #3b3b3b;
 }
+
 .property {
   color: #fff;
 }
 
 /* Make semi-responsive */
 @media (max-width:370px) {
-  .card { transform: scale(1); }
-  .container:hover .card { transform: scale(.5) rotateY(-180deg) translateX(500px) translateZ(0px); }
+  .container {   
+    position: absolute;
+    left: 0;
+    top: 50px;
+    /* Ajusta el ancho según sea necesario para pantallas más pequeñas */
+  }
+  .card {
+    transform: scale(1);    
+  }
+  .container:hover .card {
+    transform: scale(1) rotateY(-180deg) translateX(0px) translateZ(0px);
+  }
 }
 
-
-#p1{
-  display: none;
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .container {  
+    top: 50%;
+    left: -25%;
+    transform: translate(-90%, -20%);
+    /* Ajusta el ancho según sea necesario para pantallas más pequeñas */
+  }
 }
 
-
-#p2{
-  display: none;
+@media (max-width: 576px) {
+  .container {
+    width: 10%;
+    /* Ajusta el ancho según sea necesario para pantallas más pequeñas */
+    top: 30%;
+    /* Cambia la posición vertical según sea necesario para pantallas más pequeñas */
+  }
+  .card {
+    transform: scale(.6);
+  }
 }
-

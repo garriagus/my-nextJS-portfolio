@@ -3,12 +3,13 @@ import Navbar from "../Navbar/Navbar";
 // import custom components
 import SideBar from "../Sidebar/Sidebar";
 import Footer from "../Footer/Footer";
-import Head from "next/head";
+import Head from "../Head/Head";
 import Image from 'next/image'
 
-import Background from '../../../public/coding.avif'
+import Background from '../../../public/abstract.jpg'
 import next from "next/types";
 import NavBar from "../Navbar/Navbar";
+import PersonalCard from "../Cards/PersonalCard";
 // import custom components
 
 
@@ -17,22 +18,31 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <div >
-        
-      <NavBar></NavBar>
-        <div className="main">
-         
-        <Image
-          src={Background}
-          alt="Picture of the author"
-          title=""
-          width="100"
-          height="100"
-          layout="responsive"
-          objectFit="contain" />
 
-        </div>
+      <Head />
+      <Image
+        src={Background}
+        alt="Picture of the author"
+      
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        
+      />
+      <NavBar />
+    
+      
+      <div className="center">
+      <PersonalCard />
+
       </div>
+      <section className="about" id="about">
+    
+        <a >Download CV</a>
+
+      </section>
+      <section className="skills" id="skills"></section>
+
     </>
   );
 }
