@@ -5,10 +5,10 @@ import Image from 'next/image'
 import Background from '../../../public/abstract.jpg'
 
 
-const Image1 = "/../public/java.jpg";
-const Image2 = "/../public/next.jpg";
-const Image3 = "/../public/iot.jpg";
-const Image4 = "/../public/fondo.jpeg";
+import Image1 from "../../../public/java.jpg";
+import Image2 from "../../../public/next.jpg";
+import Image3 from "../../../public/iot.jpg";
+import Image4 from "../../../public/fondo.jpeg";
 
 
 
@@ -17,7 +17,7 @@ export default function Post({ children, ...props }) {
     {/*    */ }
 
     const [showImg, setShowImg] = useState<boolean>(false);
-    const [background, setBackground] = useState("/");
+    const [background, setBackground] = useState(Image3);
 
     const handleMouseEnter = (id) => {
         console.log(props.card1)
