@@ -53,8 +53,7 @@ export default function Post({ children, ...props }) {
                                     src={Image1}
                                     className={styles.image}
                                     alt="Picture of the author"
-                                    width={282}
-                                    height={423}
+                                    layout="fill"
                                     objectFit="cover"
                                     quality={100} />
                             </div>
@@ -70,8 +69,8 @@ export default function Post({ children, ...props }) {
                                     src={Image2}                                    
                                     className={styles.image}
                                     alt="Picture of the author"
-                                    width={282}
-                                    height={423}
+                                     layout="fill"
+                                    objectFit="cover"
                                     quality={100} />
                             </div>
                             <div className={styles["card__content"]}>
@@ -86,8 +85,8 @@ export default function Post({ children, ...props }) {
                                     src={Image3}                                    
                                     className={styles.image}
                                     alt="Picture of the author"
-                                    width={282}
-                                    height={423}
+                                layout="fill"
+                                    objectFit="cover"
                                     quality={100} />
                             </div>
                             <div className={styles["card__content"]}>

@@ -23,8 +23,9 @@ export default function Home() {
       <Layout>
         {
           <>
-         <PersonalCard></PersonalCard>
+      
          <CardList  >{""}</CardList>
+         <h1>asd</h1>
           </>
         }
       </Layout>
