@@ -25,7 +25,7 @@ export default function Home() {
         {
           <>          
           <PersonalCard >{ }</PersonalCard>
-            <CardList children={undefined} />
+            <CardList  >{""}</CardList>
           </>
         }
       />
