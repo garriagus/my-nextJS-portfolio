@@ -20,15 +20,10 @@ export default function Home() {
 
   return (
     <>
-      <Layout
-        children=
-        {
-          <>          
-          <PersonalCard >{ }</PersonalCard>
-            <CardList  >{""}</CardList>
-          </>
-        }
-      />
+      <Layout>
+        <PersonalCard >{ }</PersonalCard>
+        <CardList  >{""}</CardList>
+      </Layout>
 
 
     </>
