@@ -16,6 +16,8 @@ import Sidebar from '../../components/Sidebar/Sidebar'
 import Button from '../../components/Buttons/Button'
 import Card from "../../components/Cards/PersonalCard";
 
+import Folder from "../../components/Icons/Folder/Folder";
+
 import PostContainer from "../../components/Posts/PostContainer";
 
 const inter = Inter({ subsets: ['latin'] })
@@ -24,7 +26,9 @@ export default function Home() {
   return (
     <>
 
-<Navbar></Navbar>
+<PostContainer>{}</PostContainer>  
+<PostContainer>{}</PostContainer>
+<Card></Card>
 
     </>
   )

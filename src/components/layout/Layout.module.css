@@ -1,9 +1,19 @@
+/* Estilos generales */
+.image{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 .container {
-  display: flex;
+  display: block;
   flex-direction: column;
   min-height: 100vh;
+  z-index: 2;    
+  overflow: hidden;
 }
-
+ 
 .header {
   background-color: #333;
   color: #fff;
@@ -11,6 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
 .content {
@@ -18,6 +29,21 @@
   display: flex;
   flex-direction: row;
   overflow: hidden;
+    z-index: 1;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: #441f1f;
+  padding: 20px;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+    z-index: 1;
+    align-items: center;
+    justify-content: center; 
 }
 
 .footer {
@@ -29,12 +55,13 @@
   align-items: center;
 }
 
+/* Estilos responsivos */
 @media only screen and (max-width: 768px) {
   .container {
     flex-direction: column;
   }
 
-  .content {
-    flex-direction: column;
+  .sidebar {
+    width: 100%;
   }
 }
