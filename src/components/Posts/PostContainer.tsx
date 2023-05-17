@@ -38,21 +38,20 @@ export default function Post({ children, ...props }) {
                 {showImg &&
                     <Image
                         src={background}
-                        className={styles.imaged}
                         alt="Picture of the author"
                         quality={100}
                         fill
                     />}
-                <section
-                    className={styles["hero-section"]}>
-                    <div className={styles["card-grid"]}      
-                    onMouseEnter={() => {setShowImg(true)}}        
-                    onMouseLeave={() => {setShowImg(false)}}>
-                        <a onMouseEnter={() => {setBackground(Image1)}}
+                <section className={styles["hero-section"]}>
+                    <div className={styles["card-grid"]}
+                        onMouseEnter={() => { setShowImg(true) }}
+                        onMouseLeave={() => { setShowImg(false) }}>
+                        <a onMouseEnter={() => { setBackground(Image1) }}
                             className={styles.card} href="#">
                             <div className={styles["card__background"]}>
                                 <Image
                                     src={Image1}
+                                    className={styles.image}
                                     alt="Picture of the author"
                                     width={282}
                                     height={423}
@@ -64,11 +63,12 @@ export default function Post({ children, ...props }) {
                                 <h3 className={styles["card__heading"]}>Example Card Heading</h3>
                             </div>
                         </a>
-                        <a onMouseEnter={() => {setBackground(Image2)}}
+                        <a onMouseEnter={() => { setBackground(Image2) }}
                             className={styles.card} href="#">
                             <div className={styles["card__background"]}>
                                 <Image
-                                    src={Image2}
+                                    src={Image2}                                    
+                                    className={styles.image}
                                     alt="Picture of the author"
                                     width={282}
                                     height={423}
@@ -79,11 +79,12 @@ export default function Post({ children, ...props }) {
                                 <h3 className={styles["card__heading"]}>Example Card Heading</h3>
                             </div>
                         </a>
-                        <a onMouseEnter={() => {setBackground(Image3)}}
+                        <a onMouseEnter={() => { setBackground(Image3) }}
                             className={styles.card} href="#">
                             <div className={styles["card__background"]}>
                                 <Image
-                                    src={Image3}
+                                    src={Image3}                                    
+                                    className={styles.image}
                                     alt="Picture of the author"
                                     width={282}
                                     height={423}
@@ -94,11 +95,12 @@ export default function Post({ children, ...props }) {
                                 <h3 className={styles["card__heading"]}>Example Card Heading</h3>
                             </div>
                         </a>
-                        <a onMouseEnter={() => {setBackground(Image4)}}
+                        <a onMouseEnter={() => { setBackground(Image4) }}
                             className={styles.card} href="#">
                             <div className={styles["card__background"]}>
                                 <Image
                                     src={Image4}
+                                    className={styles.image}
                                     alt="Picture of the author"
                                     layout="fill"
                                     objectFit="cover"

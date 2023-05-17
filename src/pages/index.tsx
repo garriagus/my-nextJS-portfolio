@@ -21,8 +21,12 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <PersonalCard >{ }</PersonalCard>
-        <CardList  >{""}</CardList>
+        {
+          <>
+         <PersonalCard></PersonalCard>
+         <CardList  >{""}</CardList>
+          </>
+        }
       </Layout>
 
 

@@ -35,7 +35,8 @@ export default function Layout({ children, ...props }) {
         </div>   
         <div className={styles["content"]}>
           <div className={styles["main"]}>
-            {children}
+         
+           {children}
           </div>
         </div>
         <div className={styles["footer"]}>

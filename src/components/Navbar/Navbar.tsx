@@ -56,28 +56,30 @@ const NavBar = () => {
 
 
   return (
-    <>
-      <div className={styles["nav-header"]}
-        onMouseEnter={() => { setClassNav(styles.nav) }}
-      >
-        <div className={styles["nav-title"]}>
-          {/*  <div className={styles.button}
+    <> <div className={styles.nav}>
+ 
+      <div className={styles["nav-header"]}>
+        <div className={styles["nav-header"]}
+          onMouseEnter={() => { setClassNav(styles.nav) }}
+        >
+          <div className={styles["nav-title"]}>
+            {/*  <div className={styles.button}
               onClick={() => { setShowContent(!showContent) }}
             >
               <Button id="one" className="button-12" icon="FaArrowRight">
               </Button>
             </div>*/}
-        </div>
+          </div>
 
-        <div className={styles["nav-btn"]} >
-          <Button id="one" className="button-1" icon="FaArrowRight">
-          </Button>
-          <Button id="one" className="button-12" icon="FaArrowRight">
-          </Button>
-          <Button id="one" className="button-12" icon="AiFillGithub">
-          </Button>
-        </div>
-        <div className={styles.nav}>
+          <div className={styles["nav-btn"]} >
+            <Button id="one" className="button-1" icon="FaArrowRight">
+            </Button>
+            <Button id="one" className="button-12" icon="FaArrowRight">
+            </Button>
+            <Button id="one" className="button-12" icon="AiFillGithub">
+            </Button>
+          </div>
+
           <div className={styles["nav-links"]}>
             <Link
               href='/contact'
@@ -90,7 +92,7 @@ const NavBar = () => {
               href='/contact'
               className={currentRoute === '/contact' ? styles.active : styles.nonActive}
             >
-              <Button id="one" className="button-2" icon="FaJava">
+              <Button id="one" className="button-3" icon="FaJava">
               </Button>
             </Link>
             <Link
@@ -100,8 +102,10 @@ const NavBar = () => {
               <Button id="one" className="button-3" icon="AiFillGithub">
               </Button>
             </Link>
+
           </div>
         </div>
+      </div>   
       </div>
     </>
   );

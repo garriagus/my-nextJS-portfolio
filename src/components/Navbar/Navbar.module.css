@@ -5,10 +5,9 @@
   position: fixed;
   box-sizing: border-box;
   font-family: 'segoe ui';
-  display: inline;
+  display: flex;
   box-shadow: 0px 5px 10px 0px #e4ccc5;
   transform: translateY(0);
-  position: relative;
   z-index: 9999;
 }
 .navShow{
@@ -52,7 +51,7 @@
   display: none;
 }
 
-.nav>.nav-links {
+.nav-links {
   
   display: flex;
   justify-content: center;
@@ -66,9 +65,6 @@
   color: #efefef;
 }
 
-.nav>.nav-links>a:hover {
-  background-color: rgba(168, 10, 10, 0.3);
-}
 
 .nav>#nav-check {
   display: none;
@@ -103,13 +99,11 @@
 
   .nav>.nav-links{
     position: absolute;
-    display: block;
+    display: flex;
     width: 100%;
     background-color: #333;
     height: 0px;
     transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
     left: 0px;
   }
 

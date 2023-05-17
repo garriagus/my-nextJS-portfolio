@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
 
-<PostContainer>{}</PostContainer>  
+<Navbar></Navbar>  
 <PostContainer>{}</PostContainer>
 <Card></Card>
 
