@@ -26,13 +26,12 @@ export default function Home() {
       <Layout>
         {
           <>
-<h1>asd</h1>
-
-
+            <h1>asd</h1>
+            <Main>{ }</Main>
             <PersonalCard></PersonalCard>
-            
             <CardList  >{""}</CardList>
-            
+
+
           </>
         }
       </Layout>

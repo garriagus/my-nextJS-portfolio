@@ -20,28 +20,10 @@ export default function Layout({ children, ...props }) {
   return (
     <>
       <Head />
-      <Image
-        src={Background}
-        className={styles.imaged}
-        alt="Picture of the author"
-        quality={100}
-        fill
-      />
-      <body className="container">
-        <div className="header">
-          <NavBar />
-        </div>
-        <div className="content">
-          <div className="main">
-            {children}
-          </div>
-        </div>
-        <div className="footer">
-        <Footer>{}</Footer>
-        </div>
-      </body>
 
-
+      <NavBar />
+      {children}
+      <Footer>{ }</Footer>
     </>
   );
 }

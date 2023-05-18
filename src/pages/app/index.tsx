@@ -20,6 +20,9 @@ import Main from "../../components/layout/Main";
 
 import Footer from "../../components/Footer/Footer";
 
+import PersonalCard from "../../components/Cards/PersonalCard";
+import CardList from '../../components/Posts/ProjectCards'
+
 import PostContainer from "../../components/Posts/ProjectCards";
 
 const inter = Inter({ subsets: ['latin'] })
@@ -27,6 +30,8 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <>
+  <PersonalCard></PersonalCard>
+            <CardList  >{""}</CardList>
 
 <Main>{}</Main>
 

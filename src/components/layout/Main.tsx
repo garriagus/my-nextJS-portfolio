@@ -33,34 +33,19 @@ export default function Main({ children, ...props }) {
         {/* <!--=============== NAVIGATION MENU ===============--> */}
 
         <div className={styles.menu}>
-          <a
-            href="#welcome-section"
-            className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-house"]}`}
-          >
+          <a href="#welcome-section" className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-house"]}`}>
             <BsFillHouseDoorFill color="red" fontSize="2em"></BsFillHouseDoorFill>
           </a>
-          <a
-            href="#about"
-            className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-user"]}`}
-          >
+          <a href="#about" className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-user"]}`}>
             <AiOutlineUser color="red" fontSize="2em"></AiOutlineUser>
           </a>
-          <a
-            href="#projects"
-            className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-code"]}`}
-          >
+          <a href="#projects" className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-code"]}`}>
             <BiCodeAlt color="red" fontSize="2em"></BiCodeAlt>
           </a>
-          <a
-            href="#experience"
-            className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-briefcase"]}`}
-          >
+          <a href="#experience" className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-briefcase"]}`}>
             <AiFillGithub color="red" fontSize="2em"></AiFillGithub>
           </a>
-          <a
-            href="#contact"
-            className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-envelope"]}`}
-          >
+          <a href="#contact" className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-envelope"]}`}>
             <BiSend color="red" fontSize="2em"></BiSend>
           </a>
         </div>
@@ -69,7 +54,6 @@ export default function Main({ children, ...props }) {
 
         <div className={styles.portfolio}>
           {/* <!--=============== HEADER SECTION ===============--> */}
-
           <section className={styles.header}>
             <Image
               src={Background}
@@ -79,8 +63,8 @@ export default function Main({ children, ...props }) {
               width={200}
               height={200}
             />
-            <h1>Agustín Garrido</h1>
-            <h2>Fullstack Developer</h2>
+            <h1 id={styles.h1}>Agustín Garrido</h1>
+            <h2 id={styles.h2}>Fullstack Developer</h2>
             <div className={styles.socials}>
               <a
                 href="#"
@@ -95,14 +79,14 @@ export default function Main({ children, ...props }) {
                 target="_blank"
                 className={`${styles["fa-brands"]} ${styles["fa-github"]}`}
               >
-                 <AiFillLinkedin color="white" fontSize="2em"></AiFillLinkedin>
+                <AiFillLinkedin color="white" fontSize="2em"></AiFillLinkedin>
               </a>
               <a
                 href="#"
                 target="_blank"
                 className={`${styles["fa-brands"]} ${styles["fa-codepen"]}`}
               >
-                 <BsTwitter color="lightblue" fontSize="2em"></BsTwitter>
+                <BsTwitter color="lightblue" fontSize="2em"></BsTwitter>
               </a>
             </div>
             <a href="" className={styles.cta}>
@@ -115,20 +99,14 @@ export default function Main({ children, ...props }) {
           <div className={styles.content}>
             {/* <!--=============== HOME ===============--> */}
 
-            <section
-              className={`${styles["content-card"]} ${styles.home}`}
-              id={styles["welcome-section"]}
-            >
+            <section className={`${styles["content-card"]} ${styles.home}`} id="welcome-section">
               <h1 id={styles.h1}>Hola, soy Agustín</h1>
             </section>
 
             {/* <!--=============== ABOUT ME ===============--> */}
 
-            <section
-              className={`${styles["content-card"]} ${styles.about}`}
-              id="about"
-            >
-              <h1>Sobre mi</h1>
+            <section id="about" className={`${styles["content-card"]}`}>
+              <h1 id={styles.h1}>Sobre mi</h1>
               <div className={`${styles["about-item"]} ${styles["about-me"]}`}>
                 <p>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis
@@ -142,38 +120,38 @@ export default function Main({ children, ...props }) {
                 </p>
               </div>
               <div className={styles["col-2"]}>
-                <div className={`${styles["about-item"]} ${styles["skills"]}`}>
-                  <h1>Skills</h1>
-                  <span className={`${styles.skill}  ${styles.bar}`}>HTML</span>
-                  <span className={`${styles.skill}  ${styles.bar}`}>CSS</span>
-                  <span className={`${styles.skill}  ${styles.bar}`}>JavaScript</span>
-                  <span className={`${styles.skill}  ${styles.bar}`}>Node.js</span>
-                  <span className={`${styles.skill}  ${styles.bar}`}>React</span>
-                  <span className={`${styles.skill}  ${styles.bar}`}>SQL</span>
-                  <span className={`${styles.skill}  ${styles.bar}`}>Git</span>
-                  <span className={`${styles.skill}  ${styles.bar}`}>API</span>
-                  <span className={`${styles.skill}  ${styles.bar}`}>Unix/Linux</span>
-                  <span className={`${styles.skill}  ${styles.bar}`}>Jira</span>
-                  <span className={`${styles.skill}  ${styles.bar}`}>Confluence</span>
-                  <span className={`${styles.skill}  ${styles.bar}`}>Figma</span>
+                <div className={`${styles["about-item"]}`}>
+                  <h1 id={styles.h1}>Skills</h1>
+                  <span className={`${styles.skill}`}>HTML</span>
+                  <span className={`${styles.skill}`}>CSS</span>
+                  <span className={`${styles.skill}`}>JavaScript</span>
+                  <span className={`${styles.skill}`}>Node.js</span>
+                  <span className={`${styles.skill}`}>React</span>
+                  <span className={`${styles.skill}`}>SQL</span>
+                  <span className={`${styles.skill}`}>Git</span>
+                  <span className={`${styles.skill}`}>API</span>
+                  <span className={`${styles.skill}`}>Unix/Linux</span>
+                  <span className={`${styles.skill}`}>Jira</span>
+                  <span className={`${styles.skill}`}>Confluence</span>
+                  <span className={`${styles.skill}`}>Figma</span>
                 </div>
 
-                <div className={styles["about-item languages"]}>
-                  <h1>Languages</h1>
+                <div className={`${styles["about-item"]} ${styles["languages"]}`}>
+                  <h1 id={styles.h1}>Languages</h1>
                   <div className={styles.language}>
-                    <p>polish</p>
+                    <p>Español</p>
                     <span className={styles.bar}>
                       <span className={styles.polish}></span>
                     </span>
                   </div>
                   <div className={styles.language}>
-                    <p>english</p>
+                    <p>Ingles</p>
                     <span className={styles.bar}>
                       <span className={styles.english}></span>
                     </span>
                   </div>
                   <div className={styles.language}>
-                    <p>french</p>
+                    <p>Italiano</p>
                     <span className={styles.bar}>
                       <span className={styles.french}></span>
                     </span>
@@ -184,9 +162,9 @@ export default function Main({ children, ...props }) {
 
             {/*!--=============== PROJECTS ===============-->*/}
 
-            <section className={styles["content-card"]} id={styles.projects}>
-              <h1>Projects</h1>
-              <div className={styles["col-2 project-list"]}>
+            <section className={styles["content-card"]} id="projects">
+              <h1 id={styles.h1}>Projects</h1>
+              <div className={`${styles["col-2"]}`}>{/*${styles["project-list"]}*/}
                 <div className={styles["project-tile"]}>
                   <img
                     src="https://shots.codepen.io/nietoperq/pen/BaPJqGW-512.webp?version=1674304822"
@@ -248,15 +226,12 @@ export default function Main({ children, ...props }) {
                   </div>
                 </div>
               </div>
-              <a href="https://github.com/nietoperq">see more...</a>
+              <a href="https://github.com/garriagus">see more...</a>
             </section>
 
             {/*!--=============== EXPERIENCE ===============--*/}
 
-            <section
-              className={styles["content-card experience"]}
-              id="experience"
-            >
+            <section className={styles["content-card experience"]} id="experience">
               <h1>Experience</h1>
               <div className={styles.timeline}>
                 <div className={styles["timeline-items"]}>

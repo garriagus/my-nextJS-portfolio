@@ -3,16 +3,13 @@ import { useState } from "react";
 import styles from './Sidebar.module.css';
 
 import Button from "../Buttons/Button";
-import JavaCard from "../Cards/JavaCard";
-import IoTCard from "../Cards/IoTCard";
-import GithubCard from "../Cards/GithubCard";
 import PersonalCard from "../Cards/PersonalCard";
 
 const components = {
     0: <PersonalCard />,
-    1: <JavaCard />,
-    2: <IoTCard />,
-    3: < GithubCard />,
+    1: <PersonalCard />,
+    2: <PersonalCard />,
+    3: < PersonalCard />,
 }
 
 export default function Sidebar({ children }) {
