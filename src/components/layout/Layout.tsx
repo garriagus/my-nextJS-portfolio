@@ -10,7 +10,7 @@ import Background from '../../../public/violet.jpg'
 import next from "next/types";
 import NavBar from "../Navbar/Navbar";
 import PersonalCard from "../Cards/PersonalCard";
-import CardList from '../Posts/PostContainer'
+import CardList from '../Posts/ProjectCards'
 // import custom components
 
 
@@ -27,19 +27,19 @@ export default function Layout({ children, ...props }) {
         quality={100}
         fill
       />
-      <div className={styles["container"]}>
-        <div className={styles["header"]}>
+      <body className="container">
+        <div className="header">
           <NavBar />
         </div>
-        <div className={styles["content"]}>
-          <div className={styles["main"]}>
+        <div className="content">
+          <div className="main">
             {children}
           </div>
         </div>
-        <div className={styles["footer"]}>
+        <div className="footer">
         <Footer>{}</Footer>
         </div>
-      </div>
+      </body>
 
 
     </>

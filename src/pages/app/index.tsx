@@ -16,10 +16,11 @@ import Sidebar from '../../components/Sidebar/Sidebar'
 import Button from '../../components/Buttons/Button'
 import Card from "../../components/Cards/PersonalCard";
 import Post from "../../components/Posts/Post";
+import Main from "../../components/layout/Main";
 
 import Footer from "../../components/Footer/Footer";
 
-import PostContainer from "../../components/Posts/PostContainer";
+import PostContainer from "../../components/Posts/ProjectCards";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +28,7 @@ export default function Home() {
   return (
     <>
 
-<Post></Post>
+<Main>{}</Main>
 
     </>
   )
