@@ -6,7 +6,11 @@ import SideBar from "../Sidebar/Sidebar";
 import Footer from "../Footer/Footer";
 import Head from "../Head/Head";
 import Image from "next/image";
-import Background from "../../../public/violet.jpg";
+import Background from "../../../public/PaHE2U.webp";
+import Project1 from "../../../public/abstract.jpg";
+import Project2 from "../../../public/fondo.jpeg";
+import Project3 from "../../../public/layout.jpg";
+import Project4 from "../../../public/midjourney3.jpg";
 import next from "next/types";
 import NavBar from "../Navbar/Navbar";
 import PersonalCard from "../Cards/PersonalCard";
@@ -166,9 +170,11 @@ export default function Main({ children, ...props }) {
               <h1 id={styles.h1}>Projects</h1>
               <div className={`${styles["col-2"]}`}>{/*${styles["project-list"]}*/}
                 <div className={styles["project-tile"]}>
-                  <img
-                    src="https://shots.codepen.io/nietoperq/pen/BaPJqGW-512.webp?version=1674304822"
-                    alt=""
+                  <Image
+                    src={Project1}
+                    alt="asd"
+                    width={600}
+                    height={600}
                   />
                   <div className={styles.overlay}>
                     <div className={styles["project-description"]}>
@@ -181,9 +187,11 @@ export default function Main({ children, ...props }) {
                   </div>
                 </div>
                 <div className={styles["project-tile"]}>
-                  <img
-                    src="https://shots.codepen.io/nietoperq/pen/GRBOjyV-512.webp?version=1674084446"
-                    alt=""
+                <Image
+                    src={Project2}
+                    alt="asd"
+                    width={600}
+                    height={600}
                   />
                   <div className={styles.overlay}>
                     <div className={styles["project-description"]}>
@@ -196,9 +204,11 @@ export default function Main({ children, ...props }) {
                   </div>
                 </div>
                 <div className={styles["project-tile"]}>
-                  <img
-                    src="https://shots.codepen.io/nietoperq/pen/dyjWxgX-512.webp?version=1673554073"
-                    alt=""
+                <Image
+                    src={Project3}
+                    alt="asd"
+                    width={600}
+                    height={600}
                   />
                   <div className={styles.overlay}>
                     <div className={styles["project-description"]}>
@@ -211,9 +221,11 @@ export default function Main({ children, ...props }) {
                   </div>
                 </div>
                 <div className={styles["project-tile"]}>
-                  <img
-                    src="https://shots.codepen.io/nietoperq/pen/vYagdwo-512.webp?version=1673549480"
-                    alt=""
+                <Image
+                    src={Project4}
+                    alt="asd"
+                    width={600}
+                    height={600}
                   />
                   <div className={styles.overlay}>
                     <div className={styles["project-description"]}>
