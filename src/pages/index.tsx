@@ -12,6 +12,8 @@ import Layout from '../components/layout/Layout'
 import PersonalCard from "../components/Cards/PersonalCard";
 import CardList from '../components/Posts/PostContainer'
 
+import Footer from "../components/Footer/Footer";
+import Post from "../components/Posts/Post";
 import { TbH1 } from 'react-icons/tb'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -23,9 +25,10 @@ export default function Home() {
       <Layout>
         {
           <>
-      
-         <CardList  >{""}</CardList>
-         <h1>asd</h1>
+            <PersonalCard></PersonalCard>
+            
+            <CardList  >{""}</CardList>
+            
           </>
         }
       </Layout>

@@ -56,8 +56,7 @@ const NavBar = () => {
 
 
   return (
-    <> <div className={styles.nav}>
- 
+    <> <div className={styles.nav}> 
       <div className={styles["nav-header"]}>
         <div className={styles["nav-header"]}
           onMouseEnter={() => { setClassNav(styles.nav) }}

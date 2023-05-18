@@ -1,6 +1,6 @@
 import styles from './Card.module.css'
 import Image from 'next/image';
-import Profile from './../../../public/profile.jpg';
+import Skills from './../../components/Posts/Post';
 
 export default function PersonalCard({ ...props }) {
     {/*    */ }
@@ -14,11 +14,9 @@ export default function PersonalCard({ ...props }) {
                     <div className={`${styles["back"]} ${styles["side"]}`}>
                         <h3 className={styles["name"]}>Agustín Garrido</h3>
                         <div>Full-stack developer</div>
+
                         <div className={styles["info"]}>
-                            <p id={styles.p}><span className={styles["property"]}>Email: </span>agustin_g08@hotmail.com</p>
-                            <p id={styles.p}><span className={styles["property"]}>Twitter: </span>@Garriagus</p>
-                            <p id={styles.p}><span className={styles["property"]}>Phone: </span>(011) 123-4567</p>
-                            <p id={styles.p}><span className={styles["property"]}>Website: </span>agustin</p>
+                            <Skills></Skills>
                         </div>
                     </div>
 

@@ -6,8 +6,7 @@ import Footer from "../Footer/Footer";
 import Head from "../Head/Head";
 import Image from 'next/image'
 import styles from './Layout.module.css';
-
-import Background from '../../../public/abstract.jpg'
+import Background from '../../../public/violet.jpg'
 import next from "next/types";
 import NavBar from "../Navbar/Navbar";
 import PersonalCard from "../Cards/PersonalCard";
@@ -22,25 +21,23 @@ export default function Layout({ children, ...props }) {
     <>
       <Head />
       <Image
-          src={Background}
-          className={styles.imaged}
-          alt="Picture of the author"
-          quality={100}
-          fill
-             />
+        src={Background}
+        className={styles.imaged}
+        alt="Picture of the author"
+        quality={100}
+        fill
+      />
       <div className={styles["container"]}>
-       
         <div className={styles["header"]}>
           <NavBar />
-        </div>   
+        </div>
         <div className={styles["content"]}>
           <div className={styles["main"]}>
-         
-           {children}
+            {children}
           </div>
         </div>
         <div className={styles["footer"]}>
-          <p>Pie de página</p>
+        <Footer>{}</Footer>
         </div>
       </div>
 

@@ -3,19 +3,18 @@
 .container {
   perspective: 800px;
   box-sizing: border-box;
-  /* Styling */
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   letter-spacing: 4px;
-  /* Center it */
   display: block;
   position: relative;
   width: 620px;
   left: 30%;
-  height: 420px;
+  height: 60%;
   clear: both;
-  /* Opcional: ajusta el ancho según sea necesario */
+  margin-top: 5%;  
+  z-index: 1;
 }
 
 .card {
@@ -88,6 +87,10 @@
   bottom: 30px;
   left: 30px;
   color: #3b3b3b;
+  display: flex; /* Mostrar los elementos en una disposición horizontal */
+  justify-content: center; /* Distribuir los elementos de forma equitativa con espaciado entre ellos */
+  align-items: center; /* Centrar verticalmente los elementos */
+  width: 100%;
 }
 
 .property {
@@ -97,9 +100,10 @@
 /* Make semi-responsive */
 @media (max-width:370px) {
   .container {   
-    position: absolute;
+    position: static;
     left: 0;
     top: 50px;
+    
     /* Ajusta el ancho según sea necesario para pantallas más pequeñas */
   }
   .card {

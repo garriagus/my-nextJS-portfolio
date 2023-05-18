@@ -15,8 +15,9 @@ import Navbar from '../../components/Navbar/Navbar'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import Button from '../../components/Buttons/Button'
 import Card from "../../components/Cards/PersonalCard";
+import Post from "../../components/Posts/Post";
 
-import Folder from "../../components/Icons/Folder/Folder";
+import Footer from "../../components/Footer/Footer";
 
 import PostContainer from "../../components/Posts/PostContainer";
 
@@ -26,9 +27,7 @@ export default function Home() {
   return (
     <>
 
-<Navbar></Navbar>  
-<PostContainer>{}</PostContainer>
-<Card></Card>
+<Post></Post>
 
     </>
   )

@@ -67,3 +67,37 @@
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .image {
+    display: none; /* Ocultar la imagen en dispositivos móviles */
+  }
+  
+  
+  .header {
+    height: 80px;
+    font-size: 24px;
+    top: 0%;
+
+  }
+  
+  .content {
+    flex-direction: column; /* Cambiar la dirección del contenido a vertical */
+  }
+  
+  .sidebar {
+    width: 100%; /* Hacer que la barra lateral ocupe todo el ancho disponible */
+    background-color: #441f1f;
+    padding: 10px; /* Reducir el espacio interno de la barra lateral */
+  }
+  
+  .main {
+    padding: 10px; /* Reducir el espacio interno del contenido principal */
+  
+  }
+  
+  .footer {
+    height: 80px; /* Aumentar la altura del pie de página en dispositivos móviles */
+    font-size: 18px; /* Ajustar el tamaño de fuente del texto en el pie de página */
+  }
+}
