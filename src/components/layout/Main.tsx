@@ -2,9 +2,8 @@ import React, { ReactNode } from "react";
 import Navbar from "../Navbar/Navbar";
 import styles from "./Main.module.css";
 // import custom components
-import SideBar from "../Sidebar/Sidebar";
-import Footer from "../Footer/Footer";
-import Head from "../Head/Head";
+import AboutMe from "../Posts/About";
+import NavMenu from "../Sidebar/NavigationMenu";
 import Image from "next/image";
 import Background from "../../../public/PaHE2U.webp";
 import Project1 from "../../../public/abstract.jpg";
@@ -32,27 +31,10 @@ export default function Main({ children, ...props }) {
       <nav id="navbar" className={styles.navbar}>
         <a href="#"></a>
       </nav>
-
       <div className={styles.container}>
         {/* <!--=============== NAVIGATION MENU ===============--> */}
 
-        <div className={styles.menu}>
-          <a href="#welcome-section" className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-house"]}`}>
-            <BsFillHouseDoorFill color="red" fontSize="2em"></BsFillHouseDoorFill>
-          </a>
-          <a href="#about" className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-user"]}`}>
-            <AiOutlineUser color="red" fontSize="2em"></AiOutlineUser>
-          </a>
-          <a href="#projects" className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-code"]}`}>
-            <BiCodeAlt color="red" fontSize="2em"></BiCodeAlt>
-          </a>
-          <a href="#experience" className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-briefcase"]}`}>
-            <AiFillGithub color="red" fontSize="2em"></AiFillGithub>
-          </a>
-          <a href="#contact" className={`${styles["menu-icon"]} ${styles["fa-solid"]} ${styles["fa-envelope"]}`}>
-            <BiSend color="red" fontSize="2em"></BiSend>
-          </a>
-        </div>
+    <NavMenu>{}</NavMenu>
 
         {/* <!--=============== MAIN "WINDOW" ===============--> */}
 
@@ -109,59 +91,8 @@ export default function Main({ children, ...props }) {
 
             {/* <!--=============== ABOUT ME ===============--> */}
 
-            <section id="about" className={`${styles["content-card"]}`}>
-              <h1 id={styles.h1}>Sobre mi</h1>
-              <div className={`${styles["about-item"]} ${styles["about-me"]}`}>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis
-                  non dolore facere reiciendis iusto nemo tempore laboriosam
-                  laborum fugit dolorum totam incidunt tempora laudantium
-                  obcaecati natus sit, aspernatur consectetur! Voluptates?
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                  consectetur quos fugiat fugit! Officiis, temporibus.
-                </p>
-              </div>
-              <div className={styles["col-2"]}>
-                <div className={`${styles["about-item"]}`}>
-                  <h1 id={styles.h1}>Skills</h1>
-                  <span className={`${styles.skill}`}>HTML</span>
-                  <span className={`${styles.skill}`}>CSS</span>
-                  <span className={`${styles.skill}`}>JavaScript</span>
-                  <span className={`${styles.skill}`}>Node.js</span>
-                  <span className={`${styles.skill}`}>React</span>
-                  <span className={`${styles.skill}`}>SQL</span>
-                  <span className={`${styles.skill}`}>Git</span>
-                  <span className={`${styles.skill}`}>API</span>
-                  <span className={`${styles.skill}`}>Unix/Linux</span>
-                  <span className={`${styles.skill}`}>Jira</span>
-                  <span className={`${styles.skill}`}>Confluence</span>
-                  <span className={`${styles.skill}`}>Figma</span>
-                </div>
-
-                <div className={`${styles["about-item"]} ${styles["languages"]}`}>
-                  <h1 id={styles.h1}>Languages</h1>
-                  <div className={styles.language}>
-                    <p>Español</p>
-                    <span className={styles.bar}>
-                      <span className={styles.polish}></span>
-                    </span>
-                  </div>
-                  <div className={styles.language}>
-                    <p>Ingles</p>
-                    <span className={styles.bar}>
-                      <span className={styles.english}></span>
-                    </span>
-                  </div>
-                  <div className={styles.language}>
-                    <p>Italiano</p>
-                    <span className={styles.bar}>
-                      <span className={styles.french}></span>
-                    </span>
-                  </div>
-                </div>
-              </div>
+            <section id="about">
+              <AboutMe>{}</AboutMe>
             </section>
 
             {/*!--=============== PROJECTS ===============-->*/}

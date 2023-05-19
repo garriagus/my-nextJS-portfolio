@@ -20,8 +20,6 @@ export default function Layout({ children, ...props }) {
   return (
     <>
       <Head />
-
-      <NavBar />
       {children}
       <Footer>{ }</Footer>
     </>
