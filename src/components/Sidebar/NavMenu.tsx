@@ -5,6 +5,7 @@ import { AiFillGithub, AiOutlineUser, AiFillLinkedin } from "react-icons/ai";
 import { BiBody, BiCodeAlt, BiSend } from "react-icons/bi";
 import { BsFillHouseDoorFill, BsTwitter } from "react-icons/bs";
 
+
 export default function NavMenu() {
   return (
     <>
