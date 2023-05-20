@@ -6,7 +6,7 @@ import { MdLocationOn } from "react-icons/md";
 import { AiFillGithub, AiOutlineUser, AiFillLinkedin } from "react-icons/ai";
 import { BsFillHouseDoorFill, BsTwitter } from "react-icons/bs";
 
-import NavMenu from '../Sidebar/NavMenu'
+import NavMenu from './NavMenu'
 
 export default function Portfolio({ children, ...props }) {
     return (

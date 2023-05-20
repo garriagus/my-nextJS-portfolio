@@ -1,4 +1,4 @@
-import styles from './Post.module.css';
+import styles from './ProjectCards.module.css';
 import Image from 'next/image';
 
 import Logo from '../../../public/nextlogo.jpg'
