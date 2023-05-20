@@ -1,15 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import styles from './Sidebar.module.css';
-
+import Image1 from "../../../public/layout.jpg";
 import Button from "../Buttons/Button";
-import PersonalCard from "../Cards/PersonalCard";
 
 const components = {
-    0: <PersonalCard />,
-    1: <PersonalCard />,
-    2: <PersonalCard />,
-    3: < PersonalCard />,
+    0: Image1,
+    1: Image1,
+    2: Image1,
+    3: Image1,
 }
 
 export default function Sidebar({ children }) {

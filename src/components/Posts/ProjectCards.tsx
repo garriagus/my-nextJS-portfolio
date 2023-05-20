@@ -1,4 +1,4 @@
-import styles from './PostContainer.module.css'
+import styles from './ProjectCards.module.css'
 import { useState } from "react";
 import Image from 'next/image'
 

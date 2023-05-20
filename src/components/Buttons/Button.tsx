@@ -1,12 +1,8 @@
 import React from "react";
-import { useEffect } from "react";
 import styles from "./Buttons.module.css";
-import { useState } from "react";
 import { FaBeer, FaJava, FaArrowRight } from 'react-icons/fa';
 import { AiFillGithub, AiOutlineUser } from "react-icons/ai";
-import { BiBody } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
-import PersonalCard from "../Cards/PersonalCard";
 
 const components = {
   "AiOutlineUser": <AiOutlineUser style={{ color: 'white', fontSize: '30px' }} />,
