@@ -1,30 +1,280 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-/*=============== SCROLLBAR ===============*/
-.scrollbar {
-  width: 8px;
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+
+/*=============== WELCOME SECTION ===============*/
+.content-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  margin: 0 50px;
+}
+/*=============== animated text ===============
+.animation {
+  background: radial-gradient(ellipse at bottom, var(--background-color-b) 0%,
+  var(--background-color-a) 100%);
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5%
 }
 
-.container{
-  z-index: 555;
+.animation h1{
+  font-family: 'Montserrat', sans-serif;  
+  margin: 0;
+  font-size: 10vh;  
+  letter-spacing: .5vw;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: url('https://i.pinimg.com/originals/9f/9c/c5/9f9cc5217bb04790e5fb852b665ca2ff.jpg');
+  background: url('https://i.pinimg.com/564x/4a/d0/00/4ad000975d359c7dd60c17b573fb327f.jpg');
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 8s linear infinite;
+}
+
+.animation h2{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10vh;
+  letter-spacing: 1vw;
+  position: absolute;
+  top: 15vh;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: url('https://i.pinimg.com/originals/9f/9c/c5/9f9cc5217bb04790e5fb852b665ca2ff.jpg');
+  background: url('https://i.pinimg.com/564x/4a/d0/00/4ad000975d359c7dd60c17b573fb327f.jpg');
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 8s linear infinite;
+}
+*/
+
+.infos {
   background-color: var(--background-color-a);
+  padding: 1.3rem;
+  position: relative;
+  box-shadow: 0 10px 15px var(--background-color-e);
+  margin-top: 5%;
 }
 
-.scrollbarTrack {
-  background: transparent;
+
+
+.infos,
+.infos img,
+.skills {
+  border-radius: 1rem;
 }
 
-.scrollbar-thumb {
-  background: transparent;
-  border-radius: 10px;
+.top-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #7f7f7f;
+  font-size: .9rem;
 }
 
-.content:hover::-webkit-scrollbar-thumb {
-  background: var(--light-grey);
+.infos .name,
+.infos .location,
+.skills .title,
+.skill .skill-infos h3 {
+  text-transform: uppercase;
 }
+
+.infos,
+.skill,
+.list-tags {
+  display: flex;
+}
+
+/* Infos */
+.infos {
+  align-items: center;
+  width: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+}
+
+.infos img {
+  width: 5rem;
+  margin-right: 1.3rem;
+  box-shadow: 0 0 10px #f0ddd8;
+}
+
+#ul {
+  list-style: none;
+}
+
+.name {
+  font-size: 1.2rem;
+  align-items: center;
+  display: inline-block;
+}
+
+.location {
+  font-size: .7rem;
+  word-spacing: .2rem;
+  font-weight: normal;
+  color: #f2d1e1;
+}
+
+.skills {
+  background-color: var(--background-color-a);
+  padding: 1.3rem;
+  position: relative;
+  box-shadow: 0 10px 15px var(--background-color-e);
+  align-items: center;
+  margin-bottom: .7rem;
+  width: 15rem;
+  height: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.title {
+  margin-bottom: 0px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  transform: translateY(.3rem);
+}
+.html {
+  color: #be4141;
+}
+.css3{
+  color: #0078c3;
+}
+
+.js {
+  color: #fcdf36;
+}
+
+.skill .skill-infos {
+  margin-left: .6rem;
+  flex-grow: 1;
+}
+
+.skill .skill-infos h3 {
+  transform: scaleY(.85);
+  font-weight: normal;
+}
+
+.skill .bar {
+  height: .3rem;
+  background-color: #e4e9ef;
+  border-radius: 5px;
+  position: relative;
+}
+
+.skill .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #6dd594;
+  border-radius: 5px;
+  box-shadow: 1px 2px 2px #6dd59455;
+}
+
+.skill.html5 .progress {
+  width: 70%;
+}
+
+.skill.css3 .progress {
+  width: 40%;
+}
+
+.skill.js .progress {
+  width: 55%;
+}
+
+.skills .line {
+  margin: 2.5rem 0;
+  border: none;
+  height: 2px;
+  background-color: #e9edf2;
+}
+
+.list-tags {
+  position: relative;
+  
+}
+
+.list-tags li {
+  cursor: pointer;
+  background-color: #e4e9ef;
+  padding: .5rem .8rem;
+  border-radius: 20px;
+  margin: 0 .5rem .5rem 0;
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all .2s linear;
+}
+
+.list-tags li:hover {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+}
+
+
+
+.h1 {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10vh;
+  letter-spacing: 1vw;
+  position: absolute;
+  top: 15vh;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: url('https://i.pinimg.com/originals/9f/9c/c5/9f9cc5217bb04790e5fb852b665ca2ff.jpg');
+  background: url('https://i.pinimg.com/564x/4a/d0/00/4ad000975d359c7dd60c17b573fb327f.jpg');
+  background-size: cover;
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 8s linear infinite;
+}
+
+.h1:nth-child(2) {
+  top: 50vh;
+}
+
+@keyframes shine {
+  from {
+    background-position: center 0;
+  }
+
+  to {
+    background-position: center 200%;
+  }
+}
+
+
+
+
 
 /*=============== BASE ===============*/
-
 .col-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -32,75 +282,8 @@
   width: 100%;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-/*=============== MENU ===============*/
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  order: 2;
-  background: #fff;
-  width: 70px;
-  margin-left: 20px;
-  border-radius: 35px;
-  padding: 15px 0;
-  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
-}
-
-.menu-icon {
-  font-size: 2rem;
-  color: var(--light-grey);
-  margin: 15px;
-}
-
-.menu-icon:hover {
-  color: var(--accent-color);
-}
-
-/*=============== PORTFOLIO CONTAINER ===============*/
-
-.portfolio {
-  display: flex;
-  background: var(--background-color-2);
-  height: 80vh;
-  width: 85vw;
-  max-width: 1200px;
-  border-radius: var(--border-radius);
-  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
-}
-
-/*=============== HEADER ===============*/
-
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 500px;
-  height: 100%;
-  border-radius: var(--border-radius);
-  color: white;
-  overflow: auto;
-}
-
-.image{
-    border-radius: 50%;
-}
-
-.header-img {
-  width: 150px;
-  height: auto;
+.image {
   border-radius: 50%;
-  margin: 10px;
-  margin-top: 100px;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
 }
 
 #h1 {
@@ -109,44 +292,6 @@
 
 #h2 {
   font-size: 1rem;
-}
-
-.socials {
-  margin: 20px;
-}
-
-.socials a {
-  color: white;
-  margin: 0 10px;
-  transition: 0.2s linear;
-  transition-property: background-color, color;
-}
-
-.socials a:hover {
-  color: var(--accent-color);
-  transition: 0.2s linear;
-  transition-property: background-color, color;
-}
-
-
-/*=============== CONTENT ===============*/
-
-.content {
-  border-radius: var(--border-radius);
-  background-color: var(--background-color-b);
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  scroll-behavior: smooth;
-}
-
-.content-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100%;
-  margin: 0 50px;
 }
 
 /*=============== HOME SECTION ===============*/
@@ -183,12 +328,13 @@
   overflow: hidden;
 }
 
-.bar{
+.bar {
   height: 8px;
   float: left;
   background: var(--accent-color);
 }
- .span {
+
+.span {
   height: 8px;
   float: left;
   background: var(--accent-color);
@@ -387,31 +533,39 @@
   cursor: pointer;
 }
 
+
+
 /*=============== MEDIA QUERY ===============*/
 
 @media screen and (max-width: 1100px) {
   .html {
     scroll-behavior: smooth;
   }
+
   .container {
     height: auto;
     flex-direction: column;
   }
+
   .portfolio {
     flex-direction: column;
     height: 100%;
     margin: 30px 0 100px;
   }
+
   .content {
     padding-bottom: 100px;
   }
+
   .header {
     width: 100%;
     height: 100%;
   }
+
   .content-card {
     padding: 100px 0 0;
   }
+
   .menu {
     flex-direction: row;
     position: fixed;
@@ -422,10 +576,12 @@
     border-radius: 50px;
     margin: 0;
   }
+
   .menu-icon {
     font-size: 2rem;
     margin: 0 15px;
   }
+
   .home h1 {
     font-size: 3rem;
   }
@@ -457,25 +613,14 @@
     display: none;
   }
 
-@media screen and (max-width: 400px) {
-  .content-card {
-    margin: 0 30px;
-  }
-  .home h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-}
+  @media screen and (max-width: 400px) {
+    .content-card {
+      margin: 0 30px;
+    }
 
-/* A little cheat to trick the freecodecamp certification test. It requires 
-the navbar to be on top of the viewport, but I've already done that in previous 
-projects and I think in this one it looks more interesting on the side.
-I hope the freecodecamp team won't be mad at me :) */
-#navbar {
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  width: 0;
-  height: 0;
-}
+    .home h1 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
 }

@@ -14,21 +14,27 @@ export default function About({ children, ...props }) {
                 <h1 id={styles.h1}>Projects</h1>
                 <div className={`${styles["col-2"]}`}>{/*${styles["project-list"]}*/}
                     <div className={styles["project-tile"]}>
+
                         <Image
                             src={Project1}
                             alt="asd"
                             width={600}
                             height={600}
                         />
+
                         <div className={styles.overlay}>
                             <div className={styles["project-description"]}>
-                                <h3>Project 1</h3>
+                               
+                                    <h3>Shoping Cart on Next.js</h3>
+                                
+                                <a href="https://pediloyacart.netlify.app/">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit. Nisi aperiam voluptate accusamus velit omnis.
-                                </p>
+                                    Carrito de compras utilizando Next.js para el curso Codo a Codo de React 2023
+                                </p></a>
                             </div>
                         </div>
+
+
                     </div>
                     <div className={styles["project-tile"]}>
                         <Image
